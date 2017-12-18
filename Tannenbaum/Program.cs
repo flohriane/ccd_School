@@ -10,6 +10,9 @@ namespace Tannenbaum
     {
         static void Main(string[] args)
         {
+            Tannenbaum tannenbaum = new Tannenbaum();
+
+            Tannenbaum.Zeichnen(5);
         }
     }
 }
