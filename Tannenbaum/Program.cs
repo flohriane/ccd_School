@@ -10,9 +10,11 @@ namespace Tannenbaum
     {
         static void Main(string[] args)
         {
-            Tannenbaum tannenbaum = new Tannenbaum();
+            Model model = new Model();
+            View view = new View(model);
+            Tannenbaum tannenbaum = new Tannenbaum(model, view);
 
-            Tannenbaum.Zeichnen(5);
+            tannenbaum.GetStarted();
         }
     }
 }
