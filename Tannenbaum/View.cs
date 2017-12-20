@@ -23,13 +23,13 @@ namespace Tannenbaum
         public void GetStar()
         {
             Console.Write("\nSoll der Baum einen Stern bekommen? (gib J oder N ein) ");
-            string selection = Console.ReadLine().ToUpper();
+            string starSelect = Console.ReadLine().ToUpper();
 
-            if (selection == "J")
+            if (starSelect == "J")
             {
                 star = true;
             }
-            else if (selection == "N")
+            else if (starSelect == "N")
             {
                 star = false;
             }
@@ -44,9 +44,16 @@ namespace Tannenbaum
         /// </summary>
         public void GetNumberOfLines()
         {
-            Console.Write("Wie hoch soll der Tannenbaum werden? (zwischen 3-12): ");
+            Console.Write("Wie hoch soll der Tannenbaum werden? (zwischen 3-15 Zeilen): ");
             string value = Console.ReadLine();
             CheckValidValue(value);
+        }
+        /// <summary>
+        /// Console stays open until user presses any key
+        /// </summary>
+        public void EndProgramm()
+        {
+            Console.ReadKey();
         }
         /// <summary>
         /// check user input
@@ -67,12 +74,34 @@ namespace Tannenbaum
             }
         }
         /// <summary>
+        /// prints * by demand of user
+        /// prints tree body
+        /// prints trunk
+        /// </summary>
+        public void PrintTannenbaum()
+        {
+            Console.WriteLine();
+
+            if (star)
+            {
+                PutStarOnTop();
+            }
+
+            for (int i = 1; i <= height; i++)
+            {
+                int numberOfX = i + (i - 1);
+                PrintTannenbaumBody(numberOfX);
+            }
+
+            PrintTrunk();
+        }       
+        /// <summary>
         /// check if number of lines ist between 3 an 12
         /// </summary>
         /// <param name="height"></param>
         private void CheckInputNumberOfLines(int height)
         {
-            if (height < 3 || height > 12)
+            if (height < 3 || height > 15)
             {
                 Console.WriteLine("\nbitte gib eine gültige Zahl ein!!!\n");
                 // do again input by user
@@ -80,26 +109,7 @@ namespace Tannenbaum
             }
         }
         /// <summary>
-        /// prints * by demand of user
-        /// prints tree
-        /// prints trunk
-        /// </summary>
-        public void PrintTannenbaum()
-        {
-            Console.WriteLine();
-            if (star)
-            {
-                PutStarOnTop();
-            }
-            for (int i = 1; i <= height; i ++)
-            {
-                int numberOfX = i + (i-1);
-                PrintTannenbaumBody(numberOfX);
-            }
-            PrintTrunk();
-        }
-        /// <summary>
-        /// prints line of tree
+        /// prints line of tree body
         /// </summary>
         /// <param name="numberOfX"></param>
         private void PrintTannenbaumBody(int numberOfX)
@@ -138,16 +148,12 @@ namespace Tannenbaum
             Console.Write("*\n");
         }
         /// <summary>
-        /// prints trunk in the middle under the tree
+        /// prints trunk in the middle under the tree body
         /// </summary>
         private void PrintTrunk()
         {
                 PrintBlanks(height-1);
                 Console.Write("I\n\n");
-        }
-        public void EndProgramm()
-        {
-            Console.ReadKey();
         }
     }
 }
