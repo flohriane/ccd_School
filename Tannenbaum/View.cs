@@ -24,20 +24,7 @@ namespace Tannenbaum
         {
             Console.Write("\nSoll der Baum einen Stern bekommen? (gib J oder N ein) ");
             string starSelect = Console.ReadLine().ToUpper();
-
-            if (starSelect == "J")
-            {
-                star = true;
-            }
-            else if (starSelect == "N")
-            {
-                star = false;
-            }
-            else
-            {
-                Console.WriteLine("\nFalsche Eingabe!   Bitte gib J oder N ein");
-                GetStar();
-            }
+            star = CheckStar(starSelect);
         }
         /// <summary>
         /// user input for height of tree
@@ -56,7 +43,30 @@ namespace Tannenbaum
             Console.ReadKey();
         }
         /// <summary>
-        /// check user input
+        /// check user input star or not
+        /// </summary>
+        /// <param name="starSelect"></param>
+        /// <returns></returns>
+        private bool CheckStar(string starSelect)
+        {
+            if (starSelect == "J")
+            {
+                return true;
+            }
+            else if (starSelect == "N")
+            {
+                return false;
+            }
+            else
+            {
+                Console.WriteLine("\nFalsche Eingabe!   Bitte gib J oder N ein");
+                // do again input by user
+                GetStar();
+                return false;
+            }
+        }
+        /// <summary>
+        /// check user input height of tree
         /// </summary>
         /// <param name="value"></param>
         private void CheckValidValue(string value)
