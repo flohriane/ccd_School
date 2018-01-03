@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-// Ausgabe eines Tannenbaums auf der Konsole
+// Ausgabe eines Tannenbaums auf der Konsole mit oder ohne Stern in vom Benutzer festgelegter Höhe
 
 namespace Tannenbaum
 {
