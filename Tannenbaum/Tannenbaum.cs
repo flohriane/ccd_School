@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Tannenbaum
 {
+    // Controler
     class Tannenbaum
     {
         private Model model;
@@ -24,6 +25,5 @@ namespace Tannenbaum
             view.PrintTannenbaum();
             view.EndProgramm();
         }
-
     }
 }

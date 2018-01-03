@@ -36,13 +36,6 @@ namespace Tannenbaum
             CheckValidValue(value);
         }
         /// <summary>
-        /// Console stays open until user presses any key
-        /// </summary>
-        public void EndProgramm()
-        {
-            Console.ReadKey();
-        }
-        /// <summary>
         /// check user input star or not
         /// </summary>
         /// <param name="starSelect"></param>
@@ -164,6 +157,13 @@ namespace Tannenbaum
         {
                 PrintBlanks(height-1);
                 Console.Write("I\n\n");
+        }
+        /// <summary>
+        /// Console stays open until user presses any key
+        /// </summary>
+        public void EndProgramm()
+        {
+            Console.ReadKey();
         }
     }
 }
