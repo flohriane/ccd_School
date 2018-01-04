@@ -117,29 +117,22 @@ namespace Tannenbaum
         /// <param name="numberOfX"></param>
         private void PrintTannenbaumBody(int numberOfX)
         {
-            PrintBlanks(height-(numberOfX/2)-1);
-            PrintX(numberOfX);
+            // prints whitespace infront of X
+            PrintChar(height-(numberOfX/2)-1, " ");
+            // prints Xs after whitespace
+            PrintChar(numberOfX, "X");
             Console.WriteLine();
         }
         /// <summary>
-        /// prints blanks depending on height
+        /// prints characters depending on height
         /// </summary>
-        private void PrintBlanks(int numberOfBlanks)
+        /// <param name="numberOfChars"></param>
+        /// <param name="c"></param>
+        private void PrintChar(int numberOfChars, string c)
         {
-            for (int i = 0; i < numberOfBlanks; i++)
+            for (int i = 0; i < numberOfChars; i++)
             {
-                Console.Write(" ");
-            }
-        }
-        /// <summary>
-        /// prints X depending on height
-        /// </summary>
-        /// <param name="numberOfX"></param>
-        private void PrintX(int numberOfX)
-        {
-            for (int i = 0; i < numberOfX; i++)
-            {
-                Console.Write("X");
+                Console.Write(c);
             }
         }
         /// <summary>
@@ -147,7 +140,7 @@ namespace Tannenbaum
         /// </summary>
         private void PutStarOnTop()
         {
-            PrintBlanks(height-1);
+            PrintChar(height-1, " ");
             Console.Write("*\n");
         }
         /// <summary>
@@ -155,7 +148,7 @@ namespace Tannenbaum
         /// </summary>
         private void PrintTrunk()
         {
-                PrintBlanks(height-1);
+                PrintChar(height-1, " ");
                 Console.Write("I\n\n");
         }
         /// <summary>
