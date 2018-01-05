@@ -12,11 +12,23 @@ namespace Tannenbaum
     {
         static void Main(string[] args)
         {
-            Model model = new Model();
-            View view = new View(model);
-            Tannenbaum tannenbaum = new Tannenbaum(model, view);
+            View Tannenbaum = new View();
 
-            tannenbaum.GetStarted();
+            // Benutzereingabe Zeilenhöhe
+            int height = Tannenbaum.GetNumberOfLines();
+            // Benutzereingabe ob Stern auf Spitze oder nicht
+            bool star = Tannenbaum.GetStar();
+
+            if (star)
+            {
+                Tannenbaum.ZeichnenMitSpitze(height);
+            }
+            else
+            {
+                Tannenbaum.Zeichnen(height);
+            }
+ 
+            Tannenbaum.EndProgramm();
         }
     }
 }

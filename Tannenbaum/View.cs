@@ -8,38 +8,105 @@ namespace Tannenbaum
 {
     class View
     {
-        private Model model;
-        public View(Model model)
-        {
-            this.model = model;
-        }
-
-        private int height = 0;
-        private bool star;
-
         /// <summary>
-        /// lets user decide to put a star on top of the tree or not
+        /// holt im 1. Schritt vom Benutzer die Höhe des Tannenbaums
         /// </summary>
-        public void GetStar()
+        /// <returns> int height </returns>
+        public int GetNumberOfLines()
         {
-            Console.Write("\nSoll der Baum einen Stern bekommen? (gib J oder N ein) ");
-            string starSelect = Console.ReadLine().ToUpper();
-            star = CheckStar(starSelect);
-        }
-        /// <summary>
-        /// user input for height of tree
-        /// </summary>
-        public void GetNumberOfLines()
-        {
+            int height;
             Console.Write("Wie hoch soll der Tannenbaum werden? (zwischen 3-15 Zeilen): ");
             string value = Console.ReadLine();
-            CheckValidValue(value);
+            return height = CheckValidValue(value); ;
         }
+
         /// <summary>
-        /// check user input star or not
+        /// holt im 2. Schritt vom Benutzer die Angabe, ob der Baum eine Spitze bekommen soll oder nicht
+        /// ruft Prüfung für korrekte Eingabe auf
+        /// </summary>
+        /// <returns> bool star </returns>
+        public bool GetStar()
+        {
+            bool star;
+            Console.Write("\nSoll der Baum einen Stern bekommen? (gib J oder N ein) ");
+            string starSelect = Console.ReadLine().ToUpper();
+            return star = CheckStar(starSelect);
+        }
+
+        /// <summary>
+        /// zeichnet entsprechend der Benutzereingabe für Zeilenhöhe den Baum
+        /// </summary>
+        /// <param name="height"></param>
+        public void Zeichnen(int height)
+        {
+            Console.WriteLine();
+
+            // aufgrund der eingegebenen Höhe ergibt sich die Anzahl der Schleifendurchläufe
+            // die Anzahl der zu druckenden Leerzeichen und Xs ergibt sich aus der eingegebenen Höhe
+            for (int i = 1; i <= height; i++)
+            {
+                int numberOfX = i + (i - 1);
+                PrintTannenbaumBody(numberOfX, height);
+            }
+
+            PrintTrunk(height);
+        }
+
+        /// <summary>
+        /// zeichnet entsprechend der Eingabe des Benutzers eine Sptize bevor der Baum gezeichnet wird
+        /// </summary>
+        /// <param name="height"></param>
+        public void ZeichnenMitSpitze(int height)
+        {
+            Console.WriteLine();
+            PutStarOnTop(height);
+            Zeichnen(height);
+        }
+
+        /// <summary>
+        /// prüft Benutzereingabe für Zeilenhöhe auf Richtigkeit
+        /// bei falscher Eingabe wird der Aufruf zur Eingabe wiederholt
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns> int height </returns>
+        private int CheckValidValue(string value)
+        {
+            int height;
+            bool validValue = Int32.TryParse(value, out height);
+            if (validValue)
+            {
+                CheckInputNumberOfLines(height);
+                return height;
+            }
+            else
+            {
+                Console.WriteLine("\nbitte gib eine gültige Zahl ein!!!\n");
+                // do again input by user
+                GetNumberOfLines();
+                return 0;
+            }
+        }
+
+        /// <summary>
+        /// prüft, ob Benutzereingabe in sinnvollem Bereich zwischen 3 und 15 liegt
+        /// bei falscher Eingabe wird der Aufruf zur Eingabe wiederholt
+        /// </summary>
+        /// <param name="height"></param>
+        private void CheckInputNumberOfLines(int height)
+        {
+            if (height < 3 || height > 15)
+            {
+                Console.WriteLine("\nbitte gib eine gültige Zahl ein!!!\n");
+                // do again input by user
+                GetNumberOfLines();
+            }
+        }
+
+        /// <summary>
+        /// prüft die Benutzereingabe für Stern und fängt falsche Eingaben ab
         /// </summary>
         /// <param name="starSelect"></param>
-        /// <returns></returns>
+        /// <returns> bool </returns>
         private bool CheckStar(string starSelect)
         {
             if (starSelect == "J")
@@ -58,101 +125,58 @@ namespace Tannenbaum
                 return false;
             }
         }
-        /// <summary>
-        /// check user input height of tree
-        /// </summary>
-        /// <param name="value"></param>
-        private void CheckValidValue(string value)
-        {
-            bool validValue = Int32.TryParse(value, out height);
-            if (validValue)
-            {
-                CheckInputNumberOfLines(height);
-            }
-            else
-            {
-                Console.WriteLine("\nbitte gib eine gültige Zahl ein!!!\n");
-                // do again input by user
-                GetNumberOfLines();
-            }
-        }
-        /// <summary>
-        /// prints * by demand of user
-        /// prints tree body
-        /// prints trunk
-        /// </summary>
-        public void PrintTannenbaum()
-        {
-            Console.WriteLine();
 
-            if (star)
-            {
-                PutStarOnTop();
-            }
-
-            for (int i = 1; i <= height; i++)
-            {
-                int numberOfX = i + (i - 1);
-                PrintTannenbaumBody(numberOfX);
-            }
-
-            PrintTrunk();
-        }       
         /// <summary>
-        /// check if number of lines ist between 3 an 12
-        /// </summary>
-        /// <param name="height"></param>
-        private void CheckInputNumberOfLines(int height)
-        {
-            if (height < 3 || height > 15)
-            {
-                Console.WriteLine("\nbitte gib eine gültige Zahl ein!!!\n");
-                // do again input by user
-                GetNumberOfLines();
-            }
-        }
-        /// <summary>
-        /// prints line of tree body
+        /// zeichnet 1 Zeile des Baums aus Leerzeichen und X entsprechend Parameterübergabe
         /// </summary>
         /// <param name="numberOfX"></param>
-        private void PrintTannenbaumBody(int numberOfX)
+        private void PrintTannenbaumBody(int numberOfX, int height)
         {
-            // prints whitespace infront of X
+            // Leerzeichen zeichnen
             PrintChar(height-(numberOfX/2)-1, " ");
-            // prints Xs after whitespace
+            // X zeichnen
             PrintChar(numberOfX, "X");
             Console.WriteLine();
         }
+
         /// <summary>
-        /// prints characters depending on height
+        /// zeichnet einzelne Zeichen entsprechend Parameterübergabe 
         /// </summary>
         /// <param name="numberOfChars"></param>
-        /// <param name="c"></param>
-        private void PrintChar(int numberOfChars, string c)
+        /// <param name="char1"></param>
+        private void PrintChar(int numberOfChars, string char1)
         {
             for (int i = 0; i < numberOfChars; i++)
             {
-                Console.Write(c);
+                Console.Write(char1);
             }
         }
+        
         /// <summary>
-        /// prints star first depending on user input selection
+        /// zeichnet Leerzeichen und Stern
         /// </summary>
-        private void PutStarOnTop()
+        /// <param name="height"></param>
+        private void PutStarOnTop(int height)
         {
+            // zeichnet Leerzeichen vor Stern
             PrintChar(height-1, " ");
-            Console.Write("*\n");
+            // zeichnet Stern an richtiger Position
+            Console.Write("*");
         }
+
         /// <summary>
-        /// prints trunk in the middle under the tree body
+        /// zeichnet Leerzeichen und Stamm
         /// </summary>
-        private void PrintTrunk()
+        /// <param name="height"></param>
+        private void PrintTrunk(int height)
         {
-                PrintChar(height-1, " ");
-                Console.Write("I\n\n");
+            // zeichnet Leerzeichen vor Stern
+            PrintChar(height-1, " ");
+            // zeichnet Stamm an richtiger Position
+            Console.Write("I\n\n");
         }
         /// <summary>
-        /// Console stays open until user presses any key
+        /// hält Konsole offen
         /// </summary>
         public void EndProgramm()
         {
