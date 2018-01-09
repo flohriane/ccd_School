@@ -170,7 +170,7 @@ namespace Tannenbaum
         /// <param name="height"></param>
         private void PrintTrunk(int height)
         {
-            // zeichnet Leerzeichen vor Stern
+            // zeichnet Leerzeichen vor Stamm
             PrintChar(height-1, " ");
             // zeichnet Stamm an richtiger Position
             Console.Write("I\n\n");
