@@ -12,23 +12,41 @@ namespace Tannenbaum
     {
         static void Main(string[] args)
         {
-            View Tannenbaum = new View();
+            var edeltanne = Tannenbaum.Zeichnen(5);
+            View.Zeige_Tannenbaum(edeltanne);
+        }
+    }
 
-            // Benutzereingabe Zeilenhöhe
-            int height = Tannenbaum.GetNumberOfLines();
-            // Benutzereingabe ob Stern auf Spitze oder nicht
-            bool star = Tannenbaum.GetStar();
+    class View {
+        public static void Zeige_Tannenbaum(string tanne) {
+            Console.WriteLine(tanne);
+        }
+    }
+    
+    class Tannenbaum
+    {
+        public static string Zeichnen(int height)
+        {
+            var baum = "";
+            for (var i = 1; i <= height; i++)
+                baum += Astebene(height, i);
+            baum += Indent(height - 1, "I");
+            return baum;
+        }
 
-            if (star)
-            {
-                Tannenbaum.ZeichnenMitSpitze(height);
-            }
-            else
-            {
-                Tannenbaum.Zeichnen(height);
-            }
- 
-            Tannenbaum.EndProgramm();
+
+        static string Astebene(int height, int ebene) {
+            var ast = Repeat(2 * ebene - 1, 'x');
+            return Indent(height - ebene, ast);
+        }
+        
+        static string Indent(int n, string chars) {
+            return "".PadLeft(n) + chars + "\n";
+        }
+
+        static string Repeat(int n, char c)
+        {
+            return "".PadLeft(n, c);   
         }
     }
 }
