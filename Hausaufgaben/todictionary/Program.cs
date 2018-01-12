@@ -8,7 +8,32 @@ namespace todictionary
     {
         public static void Main(string[] args)
         {
-            var d = Converter.ToDictionary("a=1");     
+            string example = "a=1;b=2;c=3";
+            string putToDic = "";
+            int lengthExample = example.Length;
+            Char semicolon = ';';
+
+            // fussgesteuerte Schleife, um String zu zerteilen und leeren String zuzulassen
+            do
+            {
+                int semicolonPosition = example.IndexOf(semicolon);    // zeigt Stelle an, an der das Semicolon auftaucht
+                if (semicolonPosition > 0)
+                {
+                    putToDic = example.Substring(0, semicolonPosition); // enthält 1 Wertepaar für Dictionary 
+                    //Converter.ToDictionary(putToDic);
+                    example = example.Substring(semicolonPosition + 1); // Rest vom String
+                    lengthExample = example.Length; // neue Länge 
+                }
+                else
+                {
+                    putToDic = example;
+                    lengthExample = 0;
+                }
+            }
+            while (lengthExample > 0);
+
+        // ???
+            var d = Converter.ToDictionary(putToDic);
             Assert(d["a"] == "1");
         }
 
@@ -16,13 +41,22 @@ namespace todictionary
         {
             if (!condition) throw new InvalidOperationException("Assertion failed!");
         }
+        // ???
     }
 
     class Converter
     {
         public static IDictionary<string, string> ToDictionary(string input)
         {
-            return new Dictionary<string, string>{{"a", "99"}};
+            string a = "";
+            string b = "";
+
+            if (input != "")
+            {
+                a = input.Substring(0, 1);
+                b = input.Substring(2);
+            }
+            return new Dictionary<string, string>{{a, b}};
         }
     }
 }
