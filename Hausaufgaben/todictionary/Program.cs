@@ -9,6 +9,13 @@ namespace todictionary
         public static void Main(string[] args)
         {
             string example = "a=1;b=2;c=3";
+            //string example = "a=1;a=2";
+            //string example = "a=1;;b=2";        // TODO funktioniert nicht
+            //string example = "a=";
+            //string example = "=1";              // TODO nicht behandelt
+            //string example = "a==1";
+            //string example = "";
+
             string putToDic = "";
             int lengthExample = example.Length;
             Char semicolon = ';';
@@ -19,10 +26,10 @@ namespace todictionary
                 int semicolonPosition = example.IndexOf(semicolon);    // zeigt Stelle an, an der das Semicolon auftaucht
                 if (semicolonPosition > 0)
                 {
-                    putToDic = example.Substring(0, semicolonPosition); // enthält 1 Wertepaar für Dictionary 
-                    //Converter.ToDictionary(putToDic);
-                    example = example.Substring(semicolonPosition + 1); // Rest vom String
-                    lengthExample = example.Length; // neue Länge 
+                        putToDic = example.Substring(0, semicolonPosition); // enthält 1 Wertepaar für Dictionary 
+                        Converter.ToDictionary(putToDic);
+                        example = example.Substring(semicolonPosition + 1); // Rest vom String
+                        lengthExample = example.Length; // neue Länge 
                 }
                 else
                 {
@@ -32,7 +39,7 @@ namespace todictionary
             }
             while (lengthExample > 0);
 
-        // ???
+            // ???
             var d = Converter.ToDictionary(putToDic);
             Assert(d["a"] == "1");
         }
@@ -55,6 +62,9 @@ namespace todictionary
             {
                 a = input.Substring(0, 1);
                 b = input.Substring(2);
+
+                // dient Test
+                Console.WriteLine("Inhalt Dic "+a+"   "+b);
             }
             return new Dictionary<string, string>{{a, b}};
         }
