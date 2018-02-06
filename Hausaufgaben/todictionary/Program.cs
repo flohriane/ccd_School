@@ -48,8 +48,9 @@ namespace todictionary
         {
             Dictionary<string, string> DicEinzelwerte = new Dictionary<string, string>();
 
-            foreach (string[] paar in paare) {
-                    DicEinzelwerte.Add(paar[0], paar[1]);
+            foreach (string[] paar in paare)
+            {
+                    DicEinzelwerte.Add(paar[0], paar[1]);  // sind immer genau 2 Werte oder Wert und ""
             }
 
             return DicEinzelwerte;
