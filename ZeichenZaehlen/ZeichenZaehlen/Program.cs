@@ -54,8 +54,8 @@ namespace Zeichen_zaehlen
         {
             Dictionary<char, int> dictSingulaerZeichen = new Dictionary<char, int>();
 
-            // Dictionary dictSingulaerZeichen wird gefüllt, indem das Dictionary dictZeichen ausgelesen wird und 
-            // nur die eindeutigen Einträge übernommen werden
+            // Dictionary dictSingulaerZeichen wird gefüllt, indem das Dictionary dictZeichen ausgelesen wird 
+            // und nur die eindeutigen Einträge übernommen werden
             foreach (KeyValuePair<char, int> wertePaar in dictZeichen)
             {
                 if (!dictSingulaerZeichen.ContainsKey(wertePaar.Key)) // wenn noch nicht vorhanden
