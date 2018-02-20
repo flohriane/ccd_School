@@ -9,12 +9,9 @@ namespace Zeichen_zaehlen
         public static Dictionary<char, int> ZaehleZeichen(string eingabe)
         {
             char[] zeichen = TrenneTextInZeichen(eingabe);
-
-            Dictionary<char, int> dictZeichen = ErstelleDictZeichen(zeichen);
-
-            Dictionary<char, int> dictSingulaerZeichen = ErstelleDictSingulaerZeichen(dictZeichen);
-
-            return dictSingulaerZeichen;
+            Dictionary<char, int> dictZeichen = Zeichenhäufigkeit_bestimmen(zeichen);
+            Histogramm_ausgeben(dictZeichen);
+            return dictZeichen;
         }
 
         static char[] TrenneTextInZeichen(string eingabe)
@@ -30,7 +27,7 @@ namespace Zeichen_zaehlen
         }
 
 
-        static Dictionary<char, int> ErstelleDictZeichen(char[] zeichen)
+        static Dictionary<char, int> Zeichenhäufigkeit_bestimmen(char[] zeichen)
         {
             Dictionary<char, int> dictZeichen = new Dictionary<char, int>();
 
@@ -50,22 +47,13 @@ namespace Zeichen_zaehlen
             return dictZeichen;
         }
 
-        static Dictionary<char, int> ErstelleDictSingulaerZeichen(Dictionary<char, int> dictZeichen)
+        static void Histogramm_ausgeben(Dictionary<char, int> dictZeichen)
         {
-            Dictionary<char, int> dictSingulaerZeichen = new Dictionary<char, int>();
-
             // Dictionary dictSingulaerZeichen wird gefüllt, indem das Dictionary dictZeichen ausgelesen wird 
             // und nur die eindeutigen Einträge übernommen werden
-            foreach (KeyValuePair<char, int> wertePaar in dictZeichen)
-            {
-                if (!dictSingulaerZeichen.ContainsKey(wertePaar.Key)) // wenn noch nicht vorhanden
-                {
-                    dictSingulaerZeichen.Add(wertePaar.Key, wertePaar.Value);
-                    Console.WriteLine("dictSingulaerZeichen: {0} : {1}", wertePaar.Key, wertePaar.Value); // zum testen
-                }
+            foreach (KeyValuePair<char, int> wertePaar in dictZeichen) {
+                    Console.WriteLine("{0} : {1}", wertePaar.Key, wertePaar.Value); // zum testen
             }
-
-            return dictSingulaerZeichen;
         }
     }
 
@@ -73,10 +61,10 @@ namespace Zeichen_zaehlen
     {
         static void Main(string[] args)
         {
-            var eingabe = "Das ist mein Text";
+            var eingabe = "Das ist mein Dext";
 
             var d = Counter.ZaehleZeichen(eingabe);
-            Assert(d['D'] == 1);
+            Assert(d['D'] == 2);
         }
         static void Assert(bool condition)
         {
