@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7aa99875-275a-4573-b3a6-a914e2ca7267" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/FizzBuzz/Woerterbuch.cs" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FizzBuzz/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.FizzBuzz/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/FizzBuzz.sln" afterPath="$PROJECT_DIR$/FizzBuzz.sln" />
-      <change beforePath="$PROJECT_DIR$/FizzBuzz/FizzBuzz.csproj" afterPath="$PROJECT_DIR$/FizzBuzz/FizzBuzz.csproj" />
-      <change beforePath="$PROJECT_DIR$/FizzBuzz/Program.cs" afterPath="$PROJECT_DIR$/FizzBuzz/Program.cs" />
-      <change beforePath="$PROJECT_DIR$/FizzBuzz/Properties/AssemblyInfo.cs" afterPath="$PROJECT_DIR$/FizzBuzz/Properties/AssemblyInfo.cs" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FizzBuzz/.idea/contentModel.xml" afterPath="$PROJECT_DIR$/.idea/.idea.FizzBuzz/.idea/contentModel.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -147,12 +142,12 @@
       <option name="presentableId" value="Default" />
       <updated>1519543454111</updated>
       <workItem from="1519543457632" duration="1191000" />
-      <workItem from="1519633425477" duration="2481000" />
+      <workItem from="1519633425477" duration="3007000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3672000" />
+    <option name="totallyTimeSpent" value="4198000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
