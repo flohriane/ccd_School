@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Allgemeine Informationen über eine Assembly werden über die folgenden 
 // Attribute gesteuert. Ändern Sie diese Attributwerte, um die Informationen zu ändern,
 // die einer Assembly zugeordnet sind.
-[assembly: AssemblyTitle("Fröhliche_Zahlen_Tests")]
+[assembly: AssemblyTitle("Fröhliche_Zahlen_testen")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyProduct("Fröhliche_Zahlen_Tests")]
+[assembly: AssemblyProduct("Fröhliche_Zahlen_testen")]
 [assembly: AssemblyCopyright("Copyright © Microsoft 2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Die folgende GUID bestimmt die ID der Typbibliothek, wenn dieses Projekt für COM verfügbar gemacht wird
-[assembly: Guid("1b8ca9a4-6550-4074-b255-d12414c212f6")]
+[assembly: Guid("17156797-b6c3-4689-b9f0-ffe47899e697")]
 
 // Versionsinformationen für eine Assembly bestehen aus den folgenden vier Werten:
 //

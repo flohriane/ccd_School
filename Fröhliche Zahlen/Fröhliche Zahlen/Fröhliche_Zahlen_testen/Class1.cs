@@ -5,13 +5,12 @@ using System.Text;
 using NUnit.Framework;
 using System.Threading.Tasks;
 
-namespace Fröhliche_Zahlen_Tests
+namespace Fröhliche_Zahlen_testen
 {
-    [TestFixture]
+[TestFixture]
     public class Class1
     {
-        [Test]
-        public void Fröhliche_Zahlen_Testen()
+        public void Test_fröhliche_Zahlen ()
         {
             Assert.IsTrue(true);
         }
