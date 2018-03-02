@@ -9,13 +9,14 @@ namespace FizzBuzz_tests
         [Test]
         public void Fizzbuzz_übersetzen()
         {
-            var result = Woerterbuch.Nach_FizBuzz_übersetzen(5);
+            var result = Woerterbuch.Nach_FizBuzz_übersetzen(15);
             Assert.AreEqual("1", result[1]);
             Assert.AreEqual("2", result[2]);
             Assert.AreEqual("Fizz", result[3]);
             Assert.AreEqual("4", result[4]);
             Assert.AreEqual("Buzz", result[5]);
-            Assert.AreEqual(5, result.Count);
+            Assert.AreEqual("FizzBuzz", result[15]);
+            Assert.AreEqual(15, result.Count);
         }
     }
 }
