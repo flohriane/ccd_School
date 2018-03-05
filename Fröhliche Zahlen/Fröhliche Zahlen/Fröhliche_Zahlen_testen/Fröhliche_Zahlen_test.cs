@@ -14,9 +14,7 @@ namespace Fröhliche_Zahlen_testen
         public void Fröhliche_Zahlen_finden()
         {
             var result = Fröhliche_Zahlen.Zahlen_verarbeiten(10,20);
-            
-            // TODO: Wie prüfe ich, dass Einträge in der Liste sind ??? Bedingung ???
-            Assert.AreEqual(new[]{11,17}, result.ToArray());
+            Assert.AreEqual(new[]{10, 13, 19}, result.ToArray());
         }
 
 
@@ -36,6 +34,15 @@ namespace Fröhliche_Zahlen_testen
             Assert.AreEqual(false, result[7]);
             Assert.IsFalse(result[8]);
             Assert.IsFalse(result[9]);
+        }
+
+
+        [Test]
+        public void Destillation()
+        {
+            var zahlenbereich = new Dictionary<int,bool>{{19,false}, {7,true}, {-1,true}, {123,false}};
+            var result = Fröhliche_Zahlen.Markierte_destillieren(zahlenbereich);
+            Assert.AreEqual(new[]{7,-1}, result.ToArray());
         }
     }
 }
