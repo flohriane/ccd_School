@@ -10,7 +10,7 @@ namespace Fröhliche_Zahlen_testen
     [TestFixture]
     public class Fröhliche_Zahlen_test
     {
-        [Test]
+        [Test,Category("Akzeptanztest")]
         public void Fröhliche_Zahlen_finden()
         {
             var result = Fröhliche_Zahlen.Zahlen_verarbeiten(10,20);

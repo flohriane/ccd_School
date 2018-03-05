@@ -6,7 +6,7 @@ namespace Fröhliche_Zahlen_testen
     [TestFixture]
     class Stimmungsklassifizierung_testen
     {
-        [Test]
+        [Test, Category("Akzeptanztest")]
         public void Zahl_ist_fröhlich()
         {
             Assert.IsTrue(Stimmungsklassifizierung.Fröhlichkeit_bestimmen(1));
@@ -15,7 +15,7 @@ namespace Fröhliche_Zahlen_testen
         }
         
         
-        [Test]
+        [Test, Category("Akzeptanztest")]
         public void Zahl_ist_traurig()
         {
             Assert.IsFalse(Stimmungsklassifizierung.Fröhlichkeit_bestimmen(5));

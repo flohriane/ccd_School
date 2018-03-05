@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="681e59fd-8238-4b4e-84f0-e37aeb94cb9f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Fröhliche_Zahlen/Fröhliche_Zahlen.cs" afterPath="$PROJECT_DIR$/Fröhliche_Zahlen/Fröhliche_Zahlen.cs" />
+      <change beforePath="$PROJECT_DIR$/Fröhliche_Zahlen/Stimmungsklassifizierung.cs" afterPath="$PROJECT_DIR$/Fröhliche_Zahlen/Stimmungsklassifizierung.cs" />
       <change beforePath="$PROJECT_DIR$/Fröhliche_Zahlen_testen/Fröhliche_Zahlen_test.cs" afterPath="$PROJECT_DIR$/Fröhliche_Zahlen_testen/Fröhliche_Zahlen_test.cs" />
+      <change beforePath="$PROJECT_DIR$/Fröhliche_Zahlen_testen/Stimmungsklassifizierung_testen.cs" afterPath="$PROJECT_DIR$/Fröhliche_Zahlen_testen/Stimmungsklassifizierung_testen.cs" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,74 +14,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="Fröhliche_Zahlen.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Fröhliche_Zahlen/Fröhliche_Zahlen.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-              <folding>
-                <marker date="1520245379000" expanded="false" signature="6:115" ph="..." />
-                <marker date="1520245379000" expanded="true" signature="142:1464" ph="{...}" />
-                <marker date="1520245379000" expanded="true" signature="178:1462" ph="{...}" />
-                <marker date="1520245379000" expanded="true" signature="270:471" ph="{...}" />
-                <marker date="1520245379000" expanded="true" signature="559:735" ph="{...}" />
-                <marker date="1520245379000" expanded="true" signature="840:1075" ph="{...}" />
-                <marker date="1520245379000" expanded="true" signature="1169:1456" ph="{...}" />
-                <marker date="1520245379000" expanded="true" signature="1292:1409" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Stimmungsklassifizierung.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Fröhliche_Zahlen/Stimmungsklassifizierung.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-              <folding>
-                <marker date="1520244868000" expanded="true" signature="45:822" ph="{...}" />
-                <marker date="1520244868000" expanded="true" signature="91:820" ph="{...}" />
-                <marker date="1520244868000" expanded="true" signature="157:360" ph="{...}" />
-                <marker date="1520244868000" expanded="true" signature="430:582" ph="{...}" />
-                <marker date="1520244868000" expanded="true" signature="632:814" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Fröhliche_Zahlen_test.cs" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Fröhliche_Zahlen_testen/Fröhliche_Zahlen_test.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="15" column="60" lean-forward="false" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="60" />
-              <folding>
-                <marker date="1520245378000" expanded="true" signature="6:131" ph="..." />
-                <marker date="1520245378000" expanded="true" signature="166:455" ph="{...}" />
-                <marker date="1520245378000" expanded="true" signature="225:453" ph="{...}" />
-                <marker date="1520245378000" expanded="true" signature="292:447" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Stimmungsklassifizierung_testen.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Fröhliche_Zahlen_testen/Stimmungsklassifizierung_testen.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="14" column="9" lean-forward="true" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
-              <folding>
-                <marker date="1520245140000" expanded="true" signature="6:45" ph="..." />
-                <marker date="1520245140000" expanded="true" signature="80:804" ph="{...}" />
-                <marker date="1520245140000" expanded="true" signature="142:802" ph="{...}" />
-                <marker date="1520245140000" expanded="true" signature="203:461" ph="{...}" />
-                <marker date="1520245140000" expanded="true" signature="533:796" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
@@ -95,10 +29,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Fröhliche_Zahlen/Start.cs" />
-        <option value="$PROJECT_DIR$/Fröhliche_Zahlen/Stimmungsklassifizierung.cs" />
-        <option value="$PROJECT_DIR$/Fröhliche_Zahlen_testen/Stimmungsklassifizierung_testen.cs" />
         <option value="$PROJECT_DIR$/Fröhliche_Zahlen/Fröhliche_Zahlen.cs" />
         <option value="$PROJECT_DIR$/Fröhliche_Zahlen_testen/Fröhliche_Zahlen_test.cs" />
+        <option value="$PROJECT_DIR$/Fröhliche_Zahlen/Stimmungsklassifizierung.cs" />
+        <option value="$PROJECT_DIR$/Fröhliche_Zahlen_testen/Stimmungsklassifizierung_testen.cs" />
       </list>
     </option>
   </component>
@@ -200,12 +134,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1520239782222</updated>
-      <workItem from="1520239792500" duration="5560000" />
+      <workItem from="1520239792500" duration="6082000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5560000" />
+    <option name="totallyTimeSpent" value="6082000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -218,12 +152,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="841" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Unit Tests" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28907332" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Unit Tests" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28907332" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -255,38 +188,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Fröhliche_Zahlen/Stimmungsklassifizierung.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <marker date="1520244868000" expanded="true" signature="45:822" ph="{...}" />
-            <marker date="1520244868000" expanded="true" signature="91:820" ph="{...}" />
-            <marker date="1520244868000" expanded="true" signature="157:360" ph="{...}" />
-            <marker date="1520244868000" expanded="true" signature="430:582" ph="{...}" />
-            <marker date="1520244868000" expanded="true" signature="632:814" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Fröhliche_Zahlen_testen/Stimmungsklassifizierung_testen.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="14" column="9" lean-forward="true" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
-          <folding>
-            <marker date="1520245140000" expanded="true" signature="6:45" ph="..." />
-            <marker date="1520245140000" expanded="true" signature="80:804" ph="{...}" />
-            <marker date="1520245140000" expanded="true" signature="142:802" ph="{...}" />
-            <marker date="1520245140000" expanded="true" signature="203:461" ph="{...}" />
-            <marker date="1520245140000" expanded="true" signature="533:796" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Fröhliche_Zahlen/Fröhliche_Zahlen.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
-          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding>
             <marker date="1520245379000" expanded="false" signature="6:115" ph="..." />
             <marker date="1520245379000" expanded="true" signature="142:1464" ph="{...}" />
@@ -302,13 +207,41 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Fröhliche_Zahlen_testen/Fröhliche_Zahlen_test.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="15" column="60" lean-forward="false" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="60" />
+        <state relative-caret-position="224">
+          <caret line="14" column="9" lean-forward="false" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
           <folding>
-            <marker date="1520245378000" expanded="true" signature="6:131" ph="..." />
-            <marker date="1520245378000" expanded="true" signature="166:455" ph="{...}" />
-            <marker date="1520245378000" expanded="true" signature="225:453" ph="{...}" />
-            <marker date="1520245378000" expanded="true" signature="292:447" ph="{...}" />
+            <marker date="1520245824000" expanded="true" signature="6:131" ph="..." />
+            <marker date="1520245824000" expanded="true" signature="166:481" ph="{...}" />
+            <marker date="1520245824000" expanded="true" signature="225:479" ph="{...}" />
+            <marker date="1520245824000" expanded="true" signature="318:473" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Fröhliche_Zahlen/Stimmungsklassifizierung.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="25" column="45" lean-forward="false" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
+          <folding>
+            <marker date="1520245824000" expanded="true" signature="45:863" ph="{...}" />
+            <marker date="1520245824000" expanded="true" signature="91:861" ph="{...}" />
+            <marker date="1520245824000" expanded="true" signature="157:360" ph="{...}" />
+            <marker date="1520245824000" expanded="true" signature="429:581" ph="{...}" />
+            <marker date="1520245824000" expanded="true" signature="631:855" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Fröhliche_Zahlen_testen/Stimmungsklassifizierung_testen.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+          <folding>
+            <marker date="1520245824000" expanded="true" signature="6:45" ph="..." />
+            <marker date="1520245824000" expanded="true" signature="80:858" ph="{...}" />
+            <marker date="1520245824000" expanded="true" signature="142:856" ph="{...}" />
+            <marker date="1520245824000" expanded="true" signature="230:488" ph="{...}" />
+            <marker date="1520245824000" expanded="true" signature="587:850" ph="{...}" />
           </folding>
         </state>
       </provider>

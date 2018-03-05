@@ -12,7 +12,7 @@ namespace zahlenakrobatik
             return Fröhlichkeit_bestimmen(qq);
         }
 
-        internal static int Quadrierte_Quersumme_berechnen(int zahl)
+        private static int Quadrierte_Quersumme_berechnen(int zahl)
         {
             var ziffern = Zerlegen(zahl);
             var quadrate = ziffern.Select(z => z * z);
@@ -21,7 +21,8 @@ namespace zahlenakrobatik
 
         private static int[] Zerlegen(int zahl) {
             return zahl.ToString().ToCharArray()
-                                  .Select(zch => int.Parse(zch.ToString()))
+                                  .Select(zch => zch.ToString())
+                                  .Select(int.Parse)
                                   .ToArray();
         }
     }
