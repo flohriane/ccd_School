@@ -20,7 +20,7 @@ namespace zahlenakrobatik
                 zahlenbereich[zahl] = Stimmungsklassifizierung.Fröhlichkeit_bestimmen(zahl);
         }
 
-        internal static Dictionary <int, bool> Zahlenbereich_festlegen (int untergrenze, int obergrenze)
+        private static Dictionary <int, bool> Zahlenbereich_festlegen (int untergrenze, int obergrenze)
         {
             Dictionary<int, bool> zahlenbereich = new Dictionary<int, bool>();
             for (int i = untergrenze; i <= obergrenze; i++)
@@ -28,7 +28,7 @@ namespace zahlenakrobatik
             return zahlenbereich;
         }
 
-        internal static List<int> Markierte_destillieren(Dictionary<int, bool> zahlenbereich)
+        private static List<int> Markierte_destillieren(Dictionary<int, bool> zahlenbereich)
         {
             List <int> fröhliche_Zahlen = new List <int>();
             foreach (var zahl in zahlenbereich.Keys)
