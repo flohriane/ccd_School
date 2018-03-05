@@ -4,47 +4,31 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Fröhliche_Zahlen
+namespace zahlenakrobatik
 {
-    public class Start
-    {
-        static void Fröhliche_Zahlen_starten()
-        {
-            Fröhliche_Zahlen.Zahlen_verarbeiten(10, 30);
-        }
-        static void Assert(bool condition)
-        {
-            if (!condition) throw new InvalidOperationException("Assertion failed !");
-        }
-    }
-
-        public class Fröhliche_Zahlen
+    public class Fröhliche_Zahlen
     { 
-        internal static List<int> Zahlen_verarbeiten(int untergrenze, int obergrenze)
-        {
-            var zahlenbereich = Zahlenbereich_festlegen(untergrenze, obergrenze); // alle Zahlen in ein Dictionary<int, bool>
-
-            for (int zahl = untergrenze; zahl <= obergrenze; zahl++)
-            {
-                zahlenbereich[zahl] = Fröhliche_Zahlen_finden(zahl); // boolean setzen 
-            }
-
-            var fröhliche_Zahlen = Fröhliche_Zahlen_ablegen(zahlenbereich);
-
-            return fröhliche_Zahlen;
+        public static List<int> Zahlen_verarbeiten(int untergrenze, int obergrenze) {
+            var zahlenbereich = Zahlenbereich_festlegen(untergrenze, obergrenze);
+            Zahlen_klassifizieren(zahlenbereich);
+            return Fröhliche_destillieren(zahlenbereich);
         }
 
-        private static Dictionary <int, bool> Zahlenbereich_festlegen (int untergrenze, int obergrenze)
+        private static void Zahlen_klassifizieren(Dictionary<int, bool> zahlenbereich)
+        {
+            foreach(var zahl in zahlenbereich.Keys)
+                zahlenbereich[zahl] = Zahl_klassifizieren(zahl);
+        }
+
+        internal static Dictionary <int, bool> Zahlenbereich_festlegen (int untergrenze, int obergrenze)
         {
             Dictionary<int, bool> zahlenbereich = new Dictionary<int, bool>();
             for (int i = untergrenze; i <= obergrenze; i++)
-            {
-                zahlenbereich[i] = true;
-            }
+                zahlenbereich[i] = false;
             return zahlenbereich;
         }
 
-        static bool Fröhliche_Zahlen_finden(int zahl)
+        static bool Zahl_klassifizieren(int zahl)
         {
             var ziffern = Zahl_in_Ziffern_zerlegen(zahl);  
             var ergebnis = Ziffern_im_Quadrat_summieren(ziffern);
@@ -88,7 +72,7 @@ namespace Fröhliche_Zahlen
             return ergebnis;
         }
 
-        static List<int> Fröhliche_Zahlen_ablegen(Dictionary<int, bool> zahlenbereich)
+        static List<int> Fröhliche_destillieren(Dictionary<int, bool> zahlenbereich)
         {
             List <int> fröhliche_Zahlen = new List <int>();
             for (int zahl = 1; zahl <= zahlenbereich.Count; zahl++)
