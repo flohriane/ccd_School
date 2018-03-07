@@ -44,14 +44,25 @@ namespace happy_numbers
             return false;
         }
 
+        //internal static int[] Zahl_in_Ziffern_zerlegen(int zahl)
+        //{
+        //    int[] ziffern = new int[zahl.ToString().Length];
+
+        //    for (int i = 0; i < zahl.ToString().Length; i++)
+        //    {
+        //        ziffern[i] = Convert.ToInt32(zahl.ToString().Substring(i,1));
+        //    }
+        //    return ziffern;
+        //}
+
+        // Alternative Lösung zu for Schleife mit Linq
         internal static int[] Zahl_in_Ziffern_zerlegen(int zahl)
         {
-            int[] ziffern = new int[zahl.ToString().Length];
-
-            for (int i = 0; i < zahl.ToString().Length; i++)
-            {
-                ziffern[i] = Convert.ToInt32(zahl.ToString().Substring(i,1));
-            }
+            int[] ziffern = zahl.ToString()
+                                .ToCharArray()
+                                .Select(ziffer => ziffer.ToString())
+                                .Select(int.Parse)
+                                .ToArray();                    
             return ziffern;
         }
     }
