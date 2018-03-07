@@ -24,5 +24,19 @@ namespace happy_numbers_testen
             var result = Happy_Numbers.Zahlenbereich_festlegen(10, 20);
             Assert.IsFalse(result[10]);
         }
+
+        [Test, Category("Gerüsttest")]
+        public void Zahl_in_Ziffern_zerlegen()
+        {
+            var result = Happy_Numbers.Zahl_in_Ziffern_zerlegen(1345789);
+            Assert.AreEqual(1, result[0]);
+            Assert.AreEqual(3, result[1]);
+            Assert.AreEqual(4, result[2]);
+            Assert.AreEqual(5, result[3]);
+            Assert.AreEqual(7, result[4]);
+            Assert.AreEqual(8, result[5]);
+            Assert.AreEqual(9, result[6]);
+            Assert.AreEqual(7, result.Length);
+        }
     }
 }
