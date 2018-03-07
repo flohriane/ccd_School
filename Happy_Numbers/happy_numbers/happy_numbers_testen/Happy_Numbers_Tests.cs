@@ -23,6 +23,7 @@ namespace happy_numbers_testen
         {
             var result = Happy_Numbers.Zahlenbereich_festlegen(10, 20);
             Assert.IsFalse(result[10]);
+            Assert.AreEqual(11, result.Count);
         }
 
         [Test, Category("Gerüsttest")]
@@ -33,6 +34,13 @@ namespace happy_numbers_testen
             Assert.AreEqual(8, result[1]);
             Assert.AreEqual(9, result[2]);
             Assert.AreEqual(3, result.Length);
+        }
+
+        [Test, Category("Gerüsttest")]
+        public void Quadrierte_Summen_berechnen()
+        {
+            var result = Happy_Numbers.Quadrierte_Summen_berechnen(2123);
+            Assert.AreEqual(18, result);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace happy_numbers
             return zahlenbereich;
         }
 
-        private static void Fröhliche_Zahlen_finden(Dictionary<int,bool> zahlenbereich)
+        private static void Fröhliche_Zahlen_finden(Dictionary<int, bool> zahlenbereich)
         {
             foreach (int zahl in zahlenbereich.Keys.ToArray())
             {
@@ -39,23 +39,18 @@ namespace happy_numbers
 
         private static bool Traurig_oder_Fröhlich(int zahl)
         {
-            var ziffern = Zahl_in_Ziffern_zerlegen(zahl);
-            // TODO Ziffern im Quadarat addieren bis 1 oder 4 als Ergebnis kommt
             return false;
         }
 
-        //internal static int[] Zahl_in_Ziffern_zerlegen(int zahl)
-        //{
-        //    int[] ziffern = new int[zahl.ToString().Length];
 
-        //    for (int i = 0; i < zahl.ToString().Length; i++)
-        //    {
-        //        ziffern[i] = Convert.ToInt32(zahl.ToString().Substring(i,1));
-        //    }
-        //    return ziffern;
-        //}
 
-        // Alternative Lösung zu for Schleife mit Linq
+        internal static int Quadrierte_Summen_berechnen(int zahl)
+        {
+            var ziffern = Zahl_in_Ziffern_zerlegen(zahl);
+            var quadrate = ziffern.Select(ziffer => ziffer * ziffer);
+            return quadrate.Sum();
+        }
+
         internal static int[] Zahl_in_Ziffern_zerlegen(int zahl)
         {
             int[] ziffern = zahl.ToString()
