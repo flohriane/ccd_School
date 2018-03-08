@@ -39,8 +39,24 @@ namespace happy_numbers_testen
         [Test, Category("Gerüsttest")]
         public void Quadrierte_Summen_berechnen()
         {
-            var result = Happy_Numbers.Quadrierte_Summen_berechnen(2123);
-            Assert.AreEqual(18, result);
+            var result = Happy_Numbers.Quadrierte_Summen_berechnen(19);
+            Assert.AreEqual(82, result);
+        }
+
+        [Test, Category("Gerüsttest")]
+        public void Traurig_oder_fröhlich()
+        {
+            var result = Happy_Numbers.Traurig_oder_Fröhlich(1);
+            Assert.IsTrue(result);
+
+            result = Happy_Numbers.Traurig_oder_Fröhlich(1009);
+            Assert.IsTrue(result);
+
+            result = Happy_Numbers.Traurig_oder_Fröhlich(11);
+            Assert.IsFalse(result);
+
+            result = Happy_Numbers.Traurig_oder_Fröhlich(002);
+            Assert.IsFalse(result);
         }
     }
 }

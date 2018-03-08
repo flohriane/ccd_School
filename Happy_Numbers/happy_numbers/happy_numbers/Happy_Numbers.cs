@@ -37,12 +37,14 @@ namespace happy_numbers
 
         }
 
-        private static bool Traurig_oder_Fröhlich(int zahl)
+        internal static bool Traurig_oder_Fröhlich(int zahl)
         {
-            return false;
+            var summe_quadrierte_ziffern = Quadrierte_Summen_berechnen(zahl);
+
+            if (summe_quadrierte_ziffern == 1) return true;
+            if (summe_quadrierte_ziffern <= 4) return false;
+            return Traurig_oder_Fröhlich(summe_quadrierte_ziffern); // Rekursion
         }
-
-
 
         internal static int Quadrierte_Summen_berechnen(int zahl)
         {
