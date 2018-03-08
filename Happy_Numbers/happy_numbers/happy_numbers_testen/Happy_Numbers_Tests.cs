@@ -58,5 +58,22 @@ namespace happy_numbers_testen
             result = Happy_Numbers.Traurig_oder_Fröhlich(002);
             Assert.IsFalse(result);
         }
+
+        [Test, Category("Gerüsttest")]
+        public void Fröhliche_Zahlen_extrahieren()
+        {
+            Dictionary<int, bool> zahlenbereich = new Dictionary<int, bool>();
+            zahlenbereich.Add(10, true);
+            zahlenbereich.Add(19, true);
+            zahlenbereich.Add(1009, true);
+            zahlenbereich.Add(1, true);
+            zahlenbereich.Add(11, false);
+
+            var result = Happy_Numbers.Fröhliche_Zahlen_extrahieren(zahlenbereich);
+            Assert.AreEqual(10, result[0]);
+            Assert.AreEqual(19, result[1]);
+            Assert.AreEqual(1, result[3]);
+            Assert.AreEqual(4, result.Count);
+        }
     }
 }

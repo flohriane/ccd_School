@@ -11,10 +11,8 @@ namespace happy_numbers
         public static List<int> Zahlenliste_erstellen(int untergrenze, int obergrenze)
         {
             var zahlenbereich = Zahlenbereich_festlegen(untergrenze, obergrenze);
-            Fröhliche_Zahlen_finden(zahlenbereich);
-
-            // Dummy List
-            var happy_numbers = new List<int>();
+            zahlenbereich = Fröhliche_Zahlen_finden(zahlenbereich);
+            var happy_numbers = Fröhliche_Zahlen_extrahieren(zahlenbereich);
             return happy_numbers;
         }
 
@@ -28,13 +26,13 @@ namespace happy_numbers
             return zahlenbereich;
         }
 
-        private static void Fröhliche_Zahlen_finden(Dictionary<int, bool> zahlenbereich)
+        private static Dictionary<int, bool> Fröhliche_Zahlen_finden(Dictionary<int, bool> zahlenbereich)
         {
             foreach (int zahl in zahlenbereich.Keys.ToArray())
             {
                 zahlenbereich[zahl] = Traurig_oder_Fröhlich(zahl);
             }
-
+            return zahlenbereich;
         }
 
         internal static bool Traurig_oder_Fröhlich(int zahl)
@@ -61,6 +59,14 @@ namespace happy_numbers
                                 .Select(int.Parse)
                                 .ToArray();                    
             return ziffern;
+        }
+
+        internal static List<int> Fröhliche_Zahlen_extrahieren(Dictionary<int,bool> zahlenbereich)
+        {
+            List<int> happy_numbers = zahlenbereich.Where(kriterium => kriterium.Value == true)
+                                                   .Select(zahl => zahl.Key)
+                                                   .ToList();
+            return happy_numbers;
         }
     }
 }
