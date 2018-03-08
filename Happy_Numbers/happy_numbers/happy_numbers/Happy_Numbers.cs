@@ -16,7 +16,7 @@ namespace happy_numbers
             return happy_numbers;
         }
 
-        internal static Dictionary<int, bool> Zahlenbereich_festlegen(int untergrenze, int obergrenze)
+        private static Dictionary<int, bool> Zahlenbereich_festlegen(int untergrenze, int obergrenze)
         {
             Dictionary<int, bool> zahlenbereich = new Dictionary<int, bool>();
             for (int zahl = untergrenze; zahl <= obergrenze; zahl++)
@@ -35,23 +35,23 @@ namespace happy_numbers
             return zahlenbereich;
         }
 
-        internal static bool Traurig_oder_Fröhlich(int zahl)
+        private static bool Traurig_oder_Fröhlich(int zahl)
         {
             var summe_quadrierte_ziffern = Quadrierte_Summen_berechnen(zahl);
 
             if (summe_quadrierte_ziffern == 1) return true;
             if (summe_quadrierte_ziffern <= 4) return false;
-            return Traurig_oder_Fröhlich(summe_quadrierte_ziffern); // Rekursion
+            return Traurig_oder_Fröhlich(summe_quadrierte_ziffern); 
         }
 
-        internal static int Quadrierte_Summen_berechnen(int zahl)
+        private static int Quadrierte_Summen_berechnen(int zahl)
         {
             var ziffern = Zahl_in_Ziffern_zerlegen(zahl);
             var quadrate = ziffern.Select(ziffer => ziffer * ziffer);
             return quadrate.Sum();
         }
 
-        internal static int[] Zahl_in_Ziffern_zerlegen(int zahl)
+        private static int[] Zahl_in_Ziffern_zerlegen(int zahl)
         {
             int[] ziffern = zahl.ToString()
                                 .ToCharArray()
@@ -61,7 +61,7 @@ namespace happy_numbers
             return ziffern;
         }
 
-        internal static List<int> Fröhliche_Zahlen_extrahieren(Dictionary<int,bool> zahlenbereich)
+        private static List<int> Fröhliche_Zahlen_extrahieren(Dictionary<int,bool> zahlenbereich)
         {
             List<int> happy_numbers = zahlenbereich.Where(kriterium => kriterium.Value == true)
                                                    .Select(zahl => zahl.Key)
