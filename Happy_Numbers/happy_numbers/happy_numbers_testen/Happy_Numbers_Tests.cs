@@ -11,12 +11,12 @@ namespace happy_numbers_testen
     [TestFixture]
     public class Happy_Numbers_Tests
     {
-        //[Test, Category("Akzeptanztest")]
-        //public void Happy_Numbers_finden()
-        //{
-        //    var result = Happy_Numbers.Zahlenliste_erstellen(10, 20);
-        //    Assert.AreEqual(new[] { 10, 13, 19 }, result.ToArray());
-        //}
+        [Test, Category("Akzeptanztest")]
+        public void Happy_Numbers_finden()
+        {
+            var result = Happy_Numbers.Zahlenliste_erstellen(1, 20);
+            Assert.AreEqual(new[] { 1, 7, 10, 13, 19 }, result.ToArray());
+        }
 
         [Test, Category("Gerüsttest")]
         public void Happy_Numbers_Bereich_festlegen()
