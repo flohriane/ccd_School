@@ -25,10 +25,10 @@ namespace happy_numbers
             }
             return zahlenbereich;
 
-            // TODO warum funktioniert das nicht ?
-            // return zahlenbereich.Where(zahl => zahl.Key > untergrenze)
-            //                     .Where(zahl => zahl.Key < obergrenze)
-            //                     .ToDictionary(zahl => zahl.Key, kriterium => false);
+            //TODO warum funktioniert das nicht ?
+            //return zahlenbereich.Skip(untergrenze - 1)
+            //                    .Take(obergrenze-untergrenze+1)
+            //                    .ToDictionary(zahl => zahl.Key, kriterium => false);
         }
 
         private static Dictionary<int, bool> Fröhliche_Zahlen_finden(Dictionary<int, bool> zahlenbereich)
@@ -72,7 +72,6 @@ namespace happy_numbers
                        .Select(ziffer => ziffer.ToString())
                        .Select(int.Parse)
                        .ToArray();
-
         }
 
         private static List<int> Fröhliche_Zahlen_extrahieren(Dictionary<int,bool> zahlenbereich)
