@@ -19,26 +19,21 @@ namespace happy_numbers
         internal static Dictionary<int, bool> Zahlenbereich_festlegen(int untergrenze, int obergrenze)
         {
             Dictionary<int, bool> zahlenbereich = new Dictionary<int, bool>();
-            for (int zahl = untergrenze; zahl <= obergrenze; zahl++)
-            {
-                zahlenbereich.Add(zahl, false);
-            }
-            return zahlenbereich;
+            //for (int zahl = untergrenze; zahl <= obergrenze; zahl++)
+            //{
+            //    zahlenbereich.Add(zahl, false);
+            //}
+            //return zahlenbereich;
 
-            //TODO warum funktioniert das nicht ?
-            //return zahlenbereich.Skip(untergrenze - 1)
-            //                    .Take(obergrenze-untergrenze+1)
-            //                    .ToDictionary(zahl => zahl.Key, kriterium => false);
+            // TODO warum funktioniert das nicht ?
+            // Dictionary bleibt leer !   
+            return zahlenbereich.Where(zahl => zahl.Key >= untergrenze-1)   
+                                .Where(zahl => zahl.Key < obergrenze)
+                                .ToDictionary(zahl => zahl.Key, kriterium => false);
         }
 
         private static Dictionary<int, bool> Fröhliche_Zahlen_finden(Dictionary<int, bool> zahlenbereich)
         {
-            //foreach (int zahl in zahlenbereich.Keys.ToArray())
-            //{
-            //    zahlenbereich[zahl] = Traurig_oder_Fröhlich(zahl);
-            //}
-            //return zahlenbereich;
-
             return zahlenbereich.ToDictionary(zahl => zahl.Key, kriterium => Traurig_oder_Fröhlich(kriterium.Key));
         }
 
@@ -60,13 +55,6 @@ namespace happy_numbers
 
         private static int[] Zahl_in_Ziffern_zerlegen(int zahl)
         {
-            //int[] ziffern = zahl.ToString()
-            //                    .ToCharArray()
-            //                    .Select(ziffer => ziffer.ToString())
-            //                    .Select(int.Parse)
-            //                    .ToArray();    
-            // return ziffern;
-                            
             return zahl.ToString()
                        .ToCharArray()
                        .Select(ziffer => ziffer.ToString())
@@ -76,11 +64,6 @@ namespace happy_numbers
 
         private static List<int> Fröhliche_Zahlen_extrahieren(Dictionary<int,bool> zahlenbereich)
         {
-            //List<int> happy_numbers = zahlenbereich.Where(kriterium => kriterium.Value == true)
-            //                                       .Select(zahl => zahl.Key)
-            //                                       .ToList();
-            // return happy_numbers;
-
             return zahlenbereich.Where(kriterium => kriterium.Value == true)
                                 .Select(zahl => zahl.Key)
                                 .ToList();
