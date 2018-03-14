@@ -19,17 +19,17 @@ namespace happy_numbers
         internal static Dictionary<int, bool> Zahlenbereich_festlegen(int untergrenze, int obergrenze)
         {
             Dictionary<int, bool> zahlenbereich = new Dictionary<int, bool>();
-            //for (int zahl = untergrenze; zahl <= obergrenze; zahl++)
-            //{
-            //    zahlenbereich.Add(zahl, false);
-            //}
-            //return zahlenbereich;
+            for (int zahl = untergrenze; zahl <= obergrenze; zahl++)
+            {
+                zahlenbereich.Add(zahl, false);
+            }
+            return zahlenbereich;
 
             // TODO warum funktioniert das nicht ?
             // Dictionary bleibt leer !   
-            return zahlenbereich.Where(zahl => zahl.Key >= untergrenze-1)   
-                                .Where(zahl => zahl.Key < obergrenze)
-                                .ToDictionary(zahl => zahl.Key, kriterium => false);
+            //return zahlenbereich.Where(zahl => zahl.Key >= untergrenze-1)   
+            //                    .Where(zahl => zahl.Key < obergrenze)
+            //                    .ToDictionary(zahl => zahl.Key, kriterium => false);
         }
 
         private static Dictionary<int, bool> Fröhliche_Zahlen_finden(Dictionary<int, bool> zahlenbereich)
