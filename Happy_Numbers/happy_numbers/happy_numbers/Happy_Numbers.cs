@@ -34,32 +34,27 @@ namespace happy_numbers
 
         private static Dictionary<int, bool> Fröhliche_Zahlen_finden(Dictionary<int, bool> zahlenbereich)
         {
-            return zahlenbereich.ToDictionary(zahl => zahl.Key, kriterium => Traurig_oder_Fröhlich(kriterium.Key));
+            return zahlenbereich.ToDictionary(kv => kv.Key, kv => Fröhlichkeit_ermitteln_rec(kv.Key));
         }
 
-        private static bool Traurig_oder_Fröhlich(int zahl)
+        private static bool Fröhlichkeit_ermitteln_rec(int zahl)
         {
-            var summe_quadrierte_ziffern = Quadrierte_Summen_berechnen(zahl);
-
-            if (summe_quadrierte_ziffern == 1) return true;
-            if (summe_quadrierte_ziffern <= 4) return false;
-            return Traurig_oder_Fröhlich(summe_quadrierte_ziffern); 
+            if (zahl == 1) return true;
+            if (zahl <= 4) return false;
+            
+            zahl = Transformieren(zahl);
+            return Fröhlichkeit_ermitteln_rec(zahl); 
         }
 
-        private static int Quadrierte_Summen_berechnen(int zahl)
+        private static int Transformieren(int zahl)
         {
-            var ziffern = Zahl_in_Ziffern_zerlegen(zahl);
+            var ziffern = zahl.ToString() // REPL
+                                .ToCharArray()
+                                .Select(ziffer => ziffer.ToString())
+                                .Select(int.Parse)
+                                .ToArray();
             var quadrate = ziffern.Select(ziffer => ziffer * ziffer);
             return quadrate.Sum();
-        }
-
-        private static int[] Zahl_in_Ziffern_zerlegen(int zahl)
-        {
-            return zahl.ToString()
-                       .ToCharArray()
-                       .Select(ziffer => ziffer.ToString())
-                       .Select(int.Parse)
-                       .ToArray();
         }
 
         private static List<int> Fröhliche_Zahlen_extrahieren(Dictionary<int,bool> zahlenbereich)

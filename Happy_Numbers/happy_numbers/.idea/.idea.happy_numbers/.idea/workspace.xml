@@ -10,43 +10,41 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="Happy_Numbers.cs" pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Happy_Numbers.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/happy_numbers/Happy_Numbers.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="16" column="9" lean-forward="true" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+            <state relative-caret-position="576">
+              <caret line="54" column="43" lean-forward="false" selection-start-line="54" selection-start-column="43" selection-end-line="54" selection-end-column="43" />
               <folding>
-                <marker date="1520530521000" expanded="false" signature="6:115" ph="..." />
-                <marker date="1520530521000" expanded="true" signature="140:3470" ph="{...}" />
-                <marker date="1520530521000" expanded="true" signature="173:3468" ph="{...}" />
-                <marker date="1520530521000" expanded="true" signature="266:547" ph="{...}" />
-                <marker date="1520530521000" expanded="true" signature="651:1216" ph="{...}" />
-                <marker date="1520530521000" expanded="true" signature="809:885" ph="{...}" />
-                <marker date="1520530521000" expanded="true" signature="933:1206" ph="/* TODO warum funktioniert das nicht ? ... */" />
-                <marker date="1520530521000" expanded="true" signature="1323:1662" ph="{...}" />
-                <marker date="1520530521000" expanded="true" signature="1346:1535" ph="/* foreach (int zahl in zahlenbereich.Keys.ToArray()) ... */" />
-                <marker date="1520530521000" expanded="true" signature="1723:2012" ph="{...}" />
-                <marker date="1520530521000" expanded="true" signature="2078:2261" ph="{...}" />
-                <marker date="1520530521000" expanded="true" signature="2326:2886" ph="{...}" />
-                <marker date="1520530521000" expanded="true" signature="2349:2636" ph="/* int[] ziffern = zahl.ToString() ... */" />
-                <marker date="1520530521000" expanded="true" signature="2985:3462" ph="{...}" />
-                <marker date="1520530521000" expanded="true" signature="3008:3273" ph="/* List&lt;int&gt; happy_numbers = zahlenbereich.Where(kriterium =&gt; kriterium.Value == true) ... */" />
+                <marker date="1521021623000" expanded="false" signature="6:115" ph="..." />
+                <marker date="1521021623000" expanded="true" signature="140:2511" ph="{...}" />
+                <marker date="1521021623000" expanded="true" signature="173:2509" ph="{...}" />
+                <marker date="1521021623000" expanded="true" signature="266:547" ph="{...}" />
+                <marker date="1521021623000" expanded="false" signature="651:1262" ph="{...}" />
+                <marker date="1521021623000" expanded="true" signature="809:885" ph="{...}" />
+                <marker date="1521021623000" expanded="true" signature="933:1252" ph="/* TODO warum funktioniert das nicht ? ... */" />
+                <marker date="1521021623000" expanded="true" signature="1369:1492" ph="{...}" />
+                <marker date="1521021623000" expanded="true" signature="1558:1767" ph="{...}" />
+                <marker date="1521021623000" expanded="true" signature="1820:2206" ph="{...}" />
+                <marker date="1521021623000" expanded="false" signature="2305:2503" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Happy_Numbers_Tests.cs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Happy_Numbers_Tests.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/happy_numbers_testen/Happy_Numbers_Tests.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="128">
+              <caret line="14" column="20" lean-forward="false" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
               <folding>
-                <marker date="1520530521000" expanded="false" signature="6:159" ph="..." />
-                <marker date="1520530521000" expanded="true" signature="191:512" ph="{...}" />
-                <marker date="1520530521000" expanded="true" signature="248:510" ph="{...}" />
-                <marker date="1520530521000" expanded="true" signature="339:503" ph="{...}" />
+                <marker date="1521021835000" expanded="false" signature="6:159" ph="..." />
+                <marker date="1521021835000" expanded="true" signature="191:993" ph="{...}" />
+                <marker date="1521021835000" expanded="true" signature="248:991" ph="{...}" />
+                <marker date="1521021835000" expanded="true" signature="339:503" ph="{...}" />
+                <marker date="1521021835000" expanded="true" signature="599:752" ph="{...}" />
+                <marker date="1521021835000" expanded="true" signature="848:985" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -57,6 +55,14 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/happy_numbers_testen/Happy_Numbers_Tests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/happy_numbers/Happy_Numbers.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/happy_numbers/Happy_Numbers.cs" />
+        <option value="$PROJECT_DIR$/happy_numbers_testen/Happy_Numbers_Tests.cs" />
+      </list>
+    </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -95,11 +101,6 @@
             <path>
               <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
               <item name="happy_numbers (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="happy_numbers" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="happy_numbers (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="happy_numbers_testen" type="977d5f41:SolutionExplorerNodeRider" />
             </path>
           </expand>
@@ -125,7 +126,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected=".NET Project.Default">
     <configuration name="Default" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -141,6 +142,9 @@
       <option name="PROJECT_KIND" value="None" />
       <option name="PROJECT_TFM" value="" />
     </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue=".NET Project.Default" />
+    </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -153,11 +157,12 @@
       <option name="presentableId" value="Default" />
       <updated>1520530779480</updated>
       <workItem from="1520530782122" duration="381000" />
+      <workItem from="1521017424088" duration="2650000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="381000" />
+    <option name="totallyTimeSpent" value="3031000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -173,25 +178,26 @@
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Unit Tests" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Unit Tests" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32918397" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25608012" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -206,39 +212,72 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/happy_numbers/Happy_Numbers.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="16" column="9" lean-forward="true" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+          <folding>
+            <marker date="1521021623000" expanded="false" signature="6:115" ph="..." />
+            <marker date="1521021623000" expanded="true" signature="140:2511" ph="{...}" />
+            <marker date="1521021623000" expanded="true" signature="173:2509" ph="{...}" />
+            <marker date="1521021623000" expanded="true" signature="266:547" ph="{...}" />
+            <marker date="1521021623000" expanded="false" signature="651:1262" ph="{...}" />
+            <marker date="1521021623000" expanded="true" signature="809:885" ph="{...}" />
+            <marker date="1521021623000" expanded="true" signature="933:1252" ph="/* TODO warum funktioniert das nicht ? ... */" />
+            <marker date="1521021623000" expanded="true" signature="1369:1492" ph="{...}" />
+            <marker date="1521021623000" expanded="true" signature="1558:1767" ph="{...}" />
+            <marker date="1521021623000" expanded="true" signature="1820:2206" ph="{...}" />
+            <marker date="1521021623000" expanded="false" signature="2305:2503" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/happy_numbers_testen/Happy_Numbers_Tests.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1520530521000" expanded="false" signature="6:159" ph="..." />
-            <marker date="1520530521000" expanded="true" signature="191:512" ph="{...}" />
-            <marker date="1520530521000" expanded="true" signature="248:510" ph="{...}" />
-            <marker date="1520530521000" expanded="true" signature="339:503" ph="{...}" />
+            <marker date="1521021835000" expanded="false" signature="6:159" ph="..." />
+            <marker date="1521021835000" expanded="true" signature="191:993" ph="{...}" />
+            <marker date="1521021835000" expanded="true" signature="248:991" ph="{...}" />
+            <marker date="1521021835000" expanded="true" signature="339:503" ph="{...}" />
+            <marker date="1521021835000" expanded="true" signature="599:752" ph="{...}" />
+            <marker date="1521021835000" expanded="true" signature="848:985" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/happy_numbers/Happy_Numbers.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="16" column="9" lean-forward="true" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+        <state relative-caret-position="576">
+          <caret line="54" column="43" lean-forward="false" selection-start-line="54" selection-start-column="43" selection-end-line="54" selection-end-column="43" />
           <folding>
-            <marker date="1520530521000" expanded="false" signature="6:115" ph="..." />
-            <marker date="1520530521000" expanded="true" signature="140:3470" ph="{...}" />
-            <marker date="1520530521000" expanded="true" signature="173:3468" ph="{...}" />
-            <marker date="1520530521000" expanded="true" signature="266:547" ph="{...}" />
-            <marker date="1520530521000" expanded="true" signature="651:1216" ph="{...}" />
-            <marker date="1520530521000" expanded="true" signature="809:885" ph="{...}" />
-            <marker date="1520530521000" expanded="true" signature="933:1206" ph="/* TODO warum funktioniert das nicht ? ... */" />
-            <marker date="1520530521000" expanded="true" signature="1323:1662" ph="{...}" />
-            <marker date="1520530521000" expanded="true" signature="1346:1535" ph="/* foreach (int zahl in zahlenbereich.Keys.ToArray()) ... */" />
-            <marker date="1520530521000" expanded="true" signature="1723:2012" ph="{...}" />
-            <marker date="1520530521000" expanded="true" signature="2078:2261" ph="{...}" />
-            <marker date="1520530521000" expanded="true" signature="2326:2886" ph="{...}" />
-            <marker date="1520530521000" expanded="true" signature="2349:2636" ph="/* int[] ziffern = zahl.ToString() ... */" />
-            <marker date="1520530521000" expanded="true" signature="2985:3462" ph="{...}" />
-            <marker date="1520530521000" expanded="true" signature="3008:3273" ph="/* List&lt;int&gt; happy_numbers = zahlenbereich.Where(kriterium =&gt; kriterium.Value == true) ... */" />
+            <marker date="1521021623000" expanded="false" signature="6:115" ph="..." />
+            <marker date="1521021623000" expanded="true" signature="140:2511" ph="{...}" />
+            <marker date="1521021623000" expanded="true" signature="173:2509" ph="{...}" />
+            <marker date="1521021623000" expanded="true" signature="266:547" ph="{...}" />
+            <marker date="1521021623000" expanded="false" signature="651:1262" ph="{...}" />
+            <marker date="1521021623000" expanded="true" signature="809:885" ph="{...}" />
+            <marker date="1521021623000" expanded="true" signature="933:1252" ph="/* TODO warum funktioniert das nicht ? ... */" />
+            <marker date="1521021623000" expanded="true" signature="1369:1492" ph="{...}" />
+            <marker date="1521021623000" expanded="true" signature="1558:1767" ph="{...}" />
+            <marker date="1521021623000" expanded="true" signature="1820:2206" ph="{...}" />
+            <marker date="1521021623000" expanded="false" signature="2305:2503" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/happy_numbers_testen/Happy_Numbers_Tests.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="14" column="20" lean-forward="false" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+          <folding>
+            <marker date="1521021835000" expanded="false" signature="6:159" ph="..." />
+            <marker date="1521021835000" expanded="true" signature="191:993" ph="{...}" />
+            <marker date="1521021835000" expanded="true" signature="248:991" ph="{...}" />
+            <marker date="1521021835000" expanded="true" signature="339:503" ph="{...}" />
+            <marker date="1521021835000" expanded="true" signature="599:752" ph="{...}" />
+            <marker date="1521021835000" expanded="true" signature="848:985" ph="{...}" />
           </folding>
         </state>
       </provider>
