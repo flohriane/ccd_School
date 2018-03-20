@@ -9,32 +9,58 @@ namespace more
 {
     public class More
     {
-        private static void More_starten()
+        public void Textausgabe_formatieren()
         {
+            var text = Text_finden();
+            var abbruch = false; 
 
+            while (!abbruch)
+            {
+                Zwanzig_Zeilen_Text_verarbeiten(text);
+                Abbruch_prüfen();
+                Console.WriteLine(abbruch.ToString());
+                //if (abbruch) text.Close();
+            }
+
+            //text.Close();
+        }
+
+        private static StreamReader Text_finden()
+        {
             StreamReader text = new StreamReader(@"C:\Users\FlohrCh\Documents\ccd School\Weinachtsgedicht.txt");
-
-            var zähler = Text_zeilenweise_lesen(text);
+            return text;
         }
 
-
-    //Console.WriteLine("Die Datei enthält {0} Zeilen", zähler);           
-    private static int Text_zeilenweise_lesen(StreamReader text)
-    {
-        int zähler = 0;
-        string zeile;
-
-
-        while ((zeile = text.ReadLine()) != null)
+        private void Zwanzig_Zeilen_Text_verarbeiten(StreamReader text)
         {
-            Console.WriteLine(zeile);
-            zähler++;
+            for (int i = 1; i < 20; i++)
+            {
+                Text_zeilenweise_lesen(text);
+            }
+    }
+
+    private bool Abbruch_prüfen()
+        {
+            var cki = Abbruch_ermöglichen();
+            if (cki.Key != ConsoleKey.Escape)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
-        text.Close();
+        private static ConsoleKeyInfo Abbruch_ermöglichen()
+        {
+            Console.WriteLine("mit ESC kann das Programm verlassen werden");
+            return Console.ReadKey();
+        }
 
-        return zähler;
-
+        private static void Text_zeilenweise_lesen(StreamReader text)
+        {
+            Console.WriteLine(text.ReadLine());
+        }
     }
-}
 }
