@@ -11,8 +11,8 @@ namespace more
     {
         public void Textausgabe_formatieren()
         {
-            var text = Text_finden();
-            Text_verarbeiten(text);
+            var textStream = Text_finden();
+            Text_verarbeiten(textStream);
         }
 
         private static StreamReader Text_finden()
@@ -21,19 +21,19 @@ namespace more
             return textStream;
         }
 
-        private void Text_verarbeiten(StreamReader text)
+        private static void Text_verarbeiten(StreamReader textStream)
         {
             var abbruch = false;
 
             while (abbruch == false)
             {
-                Zwanzig_Zeilen_Text_verarbeiten(text);
+                Zwanzig_Zeilen_Text_verarbeiten(textStream);
                 abbruch = Abbruch_prüfen();
-                if (abbruch) text.Close();
+                if (abbruch) textStream.Close();
             }
         }
 
-        private void Zwanzig_Zeilen_Text_verarbeiten(StreamReader text)
+        private static void Zwanzig_Zeilen_Text_verarbeiten(StreamReader text)
         {
             for (int i = 1; i <= 20; i++)
             {
@@ -41,7 +41,7 @@ namespace more
             }
         }
 
-    private bool Abbruch_prüfen()
+    private static bool Abbruch_prüfen()
         {
             var cki = Abbruch_ermöglichen();
             return Abbruch_erwünscht(cki);            
@@ -50,10 +50,10 @@ namespace more
         private static ConsoleKeyInfo Abbruch_ermöglichen()
         {
             Console.WriteLine("\n\tweiterlesen mit beliebiger Taste - Programm verlassen mit der ESC-Taste");
-            return Console.ReadKey();
+            return Console.ReadKey(true); // "true" verhindert Anzeige der Eingabe auf der Konsole
         }
 
-        private bool Abbruch_erwünscht(ConsoleKeyInfo cki)
+        private static bool Abbruch_erwünscht(ConsoleKeyInfo cki)
         {
             if (cki.Key == ConsoleKey.Escape) 
             {
@@ -61,7 +61,6 @@ namespace more
             }
             else
             {
-                Console.WriteLine("\n");
                 return false;
             }
         }
