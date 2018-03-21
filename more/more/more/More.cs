@@ -14,35 +14,43 @@ namespace more
             var text = Text_finden();
             var abbruch = false; 
 
-            while (!abbruch)
+            while (abbruch == false)
             {
+                abbruch = Abbruch_prüfen();
                 Zwanzig_Zeilen_Text_verarbeiten(text);
-                Abbruch_prüfen();
-                Console.WriteLine(abbruch.ToString());
-                //if (abbruch) text.Close();
+                if (abbruch) text.Close();
             }
-
-            //text.Close();
         }
 
         private static StreamReader Text_finden()
         {
-            StreamReader text = new StreamReader(@"C:\Users\FlohrCh\Documents\ccd School\Weinachtsgedicht.txt");
-            return text;
+            StreamReader textStream = new StreamReader(@"C:\Users\FlohrCh\Documents\ccd School\Weinachtsgedicht.txt");
+            return textStream;
         }
 
         private void Zwanzig_Zeilen_Text_verarbeiten(StreamReader text)
         {
-            for (int i = 1; i < 20; i++)
+            for (int i = 1; i <= 20; i++)
             {
                 Text_zeilenweise_lesen(text);
             }
-    }
+        }
 
     private bool Abbruch_prüfen()
         {
             var cki = Abbruch_ermöglichen();
-            if (cki.Key != ConsoleKey.Escape)
+            return Abbruch_erwünscht(cki);            
+        }
+
+        private static ConsoleKeyInfo Abbruch_ermöglichen()
+        {
+            Console.WriteLine("\n\tmit ESC kann das Programm verlassen werden");
+            return Console.ReadKey();
+        }
+
+        private bool Abbruch_erwünscht(ConsoleKeyInfo cki)
+        {
+            if (cki.Key == ConsoleKey.Escape) 
             {
                 return true;
             }
@@ -50,12 +58,6 @@ namespace more
             {
                 return false;
             }
-        }
-
-        private static ConsoleKeyInfo Abbruch_ermöglichen()
-        {
-            Console.WriteLine("mit ESC kann das Programm verlassen werden");
-            return Console.ReadKey();
         }
 
         private static void Text_zeilenweise_lesen(StreamReader text)
