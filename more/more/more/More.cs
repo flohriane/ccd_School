@@ -12,20 +12,25 @@ namespace more
         public void Textausgabe_formatieren()
         {
             var text = Text_finden();
-            var abbruch = false; 
-
-            while (abbruch == false)
-            {
-                abbruch = Abbruch_prüfen();
-                Zwanzig_Zeilen_Text_verarbeiten(text);
-                if (abbruch) text.Close();
-            }
+            Text_verarbeiten(text);
         }
 
         private static StreamReader Text_finden()
         {
             StreamReader textStream = new StreamReader(@"C:\Users\FlohrCh\Documents\ccd School\Weinachtsgedicht.txt");
             return textStream;
+        }
+
+        private void Text_verarbeiten(StreamReader text)
+        {
+            var abbruch = false;
+
+            while (abbruch == false)
+            {
+                Zwanzig_Zeilen_Text_verarbeiten(text);
+                abbruch = Abbruch_prüfen();
+                if (abbruch) text.Close();
+            }
         }
 
         private void Zwanzig_Zeilen_Text_verarbeiten(StreamReader text)
@@ -44,7 +49,7 @@ namespace more
 
         private static ConsoleKeyInfo Abbruch_ermöglichen()
         {
-            Console.WriteLine("\n\tmit ESC kann das Programm verlassen werden");
+            Console.WriteLine("\n\tweiterlesen mit beliebiger Taste - Programm verlassen mit der ESC-Taste");
             return Console.ReadKey();
         }
 
@@ -56,6 +61,7 @@ namespace more
             }
             else
             {
+                Console.WriteLine("\n");
                 return false;
             }
         }
