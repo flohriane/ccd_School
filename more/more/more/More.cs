@@ -35,7 +35,7 @@ namespace more
 
         private static void Zwanzig_Zeilen_Text_verarbeiten(StreamReader text)
         {
-            for (int i = 1; i <= 20; i++)
+            for (int i = 1; i < 20; i++)
             {
                 Text_zeilenweise_lesen(text);
             }
@@ -49,8 +49,8 @@ namespace more
 
         private static ConsoleKeyInfo Abbruch_ermöglichen()
         {
-            Console.WriteLine("\n\tweiterlesen mit beliebiger Taste - Programm verlassen mit der ESC-Taste");
-            return Console.ReadKey(true); // "true" verhindert Anzeige der Eingabe auf der Konsole
+            Console.WriteLine("\n--- weiter mit jeder Taste - Abbruch mit [ESC] ---\n");
+            return Console.ReadKey(true); 
         }
 
         private static bool Abbruch_erwünscht(ConsoleKeyInfo cki)
@@ -65,9 +65,9 @@ namespace more
             }
         }
 
-        private static void Text_zeilenweise_lesen(StreamReader text)
+        private static void Text_zeilenweise_lesen(StreamReader textStream)
         {
-            Console.WriteLine(text.ReadLine());
+            Console.WriteLine(textStream.ReadLine());
         }
     }
 }

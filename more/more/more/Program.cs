@@ -12,8 +12,10 @@ namespace more
         static void Main(string[] args)
         {
             More more = new More();
+            More_Lambda more_lambda = new More_Lambda();
 
-            more.Textausgabe_formatieren();
+            //more.Textausgabe_formatieren();           // Variante I
+            more_lambda.Textausgabe_formatieren();    // Variante II
         }
     }
 }
