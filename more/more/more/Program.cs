@@ -12,11 +12,12 @@ namespace more
         static void Main(string[] args)
         {
             var cli = new Cli(args);
+            var ui = new UI();
             var fs = new Filesystem();
-            var presenter = new PagewisePresentation();
             
             var text = fs.Load_text(cli.Filename);
-            presenter.Display(text, cli.PageLen);
+            var seiten = Pagination.Convert(text, cli.PageLen);
+            ui.Ausgeben(seiten);
         }
     }
 }

@@ -8,6 +8,6 @@
         }
 
         public string Filename => _args[0];
-        public int PageLen => 5; //_args.Length > 1 ? int.Parse(_args[1]) : 20;
+        public int PageLen => _args.Length > 1 ? int.Parse(_args[1]) : 20;
     }
 }
