@@ -1,21 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace more
 {
+    //            args[0]        args[1]
+    // $ more.exe meinedatei.txt 15
     class Program
     {
         static void Main(string[] args)
         {
-            More more = new More();
-            More_Lambda more_lambda = new More_Lambda();
-
-            //more.Textausgabe_formatieren();           // Variante I
-            more_lambda.Textausgabe_formatieren();    // Variante II
+            var cli = new Cli(args);
+            var fs = new Filesystem();
+            var presenter = new PagewisePresentation();
+            
+            var text = fs.Load_text(cli.Filename);
+            presenter.Display(text, cli.PageLen);
         }
     }
 }
