@@ -11,12 +11,12 @@ namespace more
     {
         static void Main(string[] args)
         {
-            var cli = new Cli(args);
-            var ui = new UI();
+            var cli = new Cli(args);    
+            var ui = new UI();          
             var fs = new Filesystem();
             
-            var text = fs.Load_text(cli.Filename);
-            var seiten = Pagination.Convert(text, cli.PageLen);
+            var text = fs.Load_text(cli.Filename);                  // 
+            var seiten = Pagination.Convert(text, cli.PageLen);     // 
             ui.Ausgeben(seiten);
         }
     }
