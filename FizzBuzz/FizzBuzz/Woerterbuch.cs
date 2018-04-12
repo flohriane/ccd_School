@@ -8,13 +8,16 @@ namespace FizzBuzz
         public static void Uebersetze(int obergrenze)
         {
             var woerterbuchFizzBuzz = Nach_FizzBuzz_übersetzen(obergrenze);
+
             Gib_Übersetzung_aus(woerterbuchFizzBuzz, obergrenze);
         }
 
         internal static Dictionary<int, string> Nach_FizzBuzz_übersetzen(int obergrenze)
         {
-            Dictionary<int, string> woerterbuchFizzBuzz = ErstelleWoerterbuch(obergrenze);
+            var woerterbuchFizzBuzz = ErstelleWoerterbuch(obergrenze);
+
             UebersetzeWoerterbuch(woerterbuchFizzBuzz, obergrenze);
+
             return woerterbuchFizzBuzz;
         }
         
@@ -35,7 +38,8 @@ namespace FizzBuzz
 
             for (int i = 1; i <= obergrenze; i++)
             {
-                woerterbuchFizzBuzz[i] = Convert.ToString(i);
+                //woerterbuchFizzBuzz[i] = Convert.ToString(i);        oder 
+                woerterbuchFizzBuzz.Add(i, Convert.ToString(i));
             }
 
             return woerterbuchFizzBuzz;

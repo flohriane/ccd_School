@@ -6,7 +6,7 @@ namespace FizzBuzz_tests
     [TestFixture]
     public class Woerterbuch_tests
     {
-        [Test, Category ("Akzeptanztest")]
+        [Test]
         public void Fizzbuzz_übersetzen()
         {
             var result = Woerterbuch.Nach_FizzBuzz_übersetzen(15);

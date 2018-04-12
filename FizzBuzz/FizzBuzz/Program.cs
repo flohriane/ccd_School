@@ -8,10 +8,15 @@ namespace FizzBuzz
     class Program
     {
         static void Main(string[] args)
+        {     
+            var obergrenze = Benutzereingabe_holen();
+            Woerterbuch.Uebersetze(obergrenze);
+        }
+
+        static int Benutzereingabe_holen()
         {
             Console.Write("Bitte geben Sie ein Zahl zwischen 1 und 100 ein: ");
-            var obergrenze = Convert.ToInt32(Console.ReadLine());
-            Woerterbuch.Uebersetze(obergrenze);
+            return Convert.ToInt32(Console.ReadLine());
         }
 
         static void Assert(bool condition)
