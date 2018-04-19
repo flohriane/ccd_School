@@ -10,7 +10,7 @@ namespace kalender
     {
         static void Main(string[] args)
         {
-
+            Monatskalender.Kalender_erstellen("2 2020");
         }
     }
 }
