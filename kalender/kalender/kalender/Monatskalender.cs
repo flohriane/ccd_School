@@ -28,8 +28,6 @@ namespace kalender
 
             var kalender_liste = Kalender_formatieren(monat_name, kalender_zeile);
 
-            Kalender_ausgeben(kalender_liste);
-
             return kalender_liste;
         }
 
@@ -189,15 +187,6 @@ namespace kalender
                 }
             }
             return kalender;
-        }
-        private static void Kalender_ausgeben(List<string> kalender)
-        {
-            for (int zeile = 0; zeile < kalender.Count; zeile++)
-            {
-                Console.WriteLine(kalender[zeile]);
-            }
-
-            Console.ReadKey();
         }
     }
 }
