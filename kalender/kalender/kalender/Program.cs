@@ -15,7 +15,7 @@ namespace kalender
 
             var monat_jahr = ui.Monat_Jahr_einlesen();
 
-            var kalender_liste = Monatskalender.Kalender_erstellen(monat_jahr); // hier muss die Übergabe aus der Kommandozeile rein
+            var kalender_liste = Monatskalender.Kalender_erstellen(monat_jahr); // hier muss die Angabe aus der Kommandozeile rein
 
             ui.Kalender_ausgeben(kalender_liste);
         }

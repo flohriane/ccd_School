@@ -10,7 +10,7 @@ namespace kalender
     {
         public string Monat_Jahr_einlesen()
         {
-            return Console.ReadLine(); // ToDo ersetzen durch Programmaufruf aus cmd Zeile
+            return Console.ReadLine(); // ToDo ersetzen durch Programmaufruf aus cmd Zeile   wie komme ich zu args??? was steht in args genau drin ???
         }
 
         public void Kalender_ausgeben(List<string> kalender)

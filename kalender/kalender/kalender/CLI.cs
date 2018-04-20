@@ -7,8 +7,11 @@ using System.Threading.Tasks;
 namespace kalender
 {
     class CLI
+    // ToDo hier komme ich nicht weiter: 
+    // Wie rufe ich das Programm außerhalb von VS auf?
+    // Was steht genau in args drin?
     {
-        private readonly string[] _args;
+        private readonly string[] _args;        
         public CLI(string[] args)
         {
             _args = args;

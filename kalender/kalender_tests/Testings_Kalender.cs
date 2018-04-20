@@ -37,8 +37,7 @@ namespace kalender_tests
 
             Assert.AreEqual("Sunday", ergebnis.ToString());
         }
-
-
+        
         [Test, Category ("Gerüsttest")]
         public static void Teste_Anzahl_Zeilen()
         {

@@ -83,6 +83,14 @@ namespace kalender
             }
         }
 
+        internal static string Erster_Wochentag_ermitteln(string jahr, string monat)
+        {
+            DateTime tag = new DateTime(Convert.ToInt32(jahr), Convert.ToInt32(monat), 1);
+            var wochentag = tag.DayOfWeek;
+
+            return Convert.ToString(wochentag);
+        }
+        
         private static int Anzahl_Tage_ermitteln(bool schaltjahr, string monat)
         {
             switch (monat)
@@ -117,14 +125,6 @@ namespace kalender
             }
         }
 
-        internal static string Erster_Wochentag_ermitteln(string jahr, string monat)
-        {
-            DateTime tag = new DateTime(Convert.ToInt32(jahr), Convert.ToInt32(monat), 1);
-            var wochentag = tag.DayOfWeek;
-
-            return Convert.ToString(wochentag);
-        }
-
         private static string Leerzeichen_schreiben(string erster_wochentag)
         {
             var zeile = "";
@@ -149,6 +149,7 @@ namespace kalender
                     return zeile = "n.n.";
             }
         }
+
         private static string Tage_in_Zeile_schreiben(string zeile, int anzahl)
         {
             for (int tag = 1; tag <= anzahl; tag++)
