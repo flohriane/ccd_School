@@ -10,13 +10,9 @@ namespace kalender
     {
         static void Main(string[] args)
         {
-            var cli = new CLI(args);
+            var kalender_liste = Monatskalender.Kalender_erstellen(args); // hier muss die Angabe aus der Kommandozeile rein
+
             var ui = new UI();
-
-            var monat_jahr = ui.Monat_Jahr_einlesen();
-
-            var kalender_liste = Monatskalender.Kalender_erstellen(monat_jahr); // hier muss die Angabe aus der Kommandozeile rein
-
             ui.Kalender_ausgeben(kalender_liste);
         }
     }

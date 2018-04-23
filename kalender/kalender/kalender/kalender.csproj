@@ -43,11 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CLI.cs" />
-    <Compile Include="Monatskalender.cs" />
+    <Compile Include="adapters\CLI.cs" />
+    <Compile Include="adapters\UI.cs" />
+    <Compile Include="domain\Formatierer.cs" />
+    <Compile Include="domain\Kalender.cs" />
+    <Compile Include="domain\Monatskalender.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UI.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
