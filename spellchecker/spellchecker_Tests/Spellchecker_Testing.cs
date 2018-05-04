@@ -12,10 +12,10 @@ namespace spellchecker_Tests
     public class Spellchecker_Testing
     {
         [Test, Category ("Akzeptanztest")]
-        public void Fehler_gefunden ()
+        public void Fehler_gefunden()
         {
-            var ergebnis = Spellchecker_Start.Wörter_prüfen(new[] {"Äpfel", "Birnen", "Kirschen"}, new[] {"Äppel", "Brinen", "Kirschen"});
-            Assert.AreEqual(new[] {"Äppel", "Birnen",""}, ergebnis.ToArray());
+            var ergebnis = Spellchecker_Start.Wörter_auf_Fehler_überprüfen(new [] {"Äpfel", "Birnen", "Kirschen", "Aprikosen", "Pflaumen"}, new List<string> {"Brinen", "Äppel"});
+            Assert.AreEqual(new[] {"Brinen", "Äppel"}, ergebnis.ToArray());
         }
     }
 }

@@ -8,17 +8,29 @@ namespace spellchecker
 {
     public class Spellchecker_Start
     {
-        public static List<string> Wörter_prüfen(string[] wörter_Datei, string[] eingabe_Konsole)
-        {
-            var array_größe = eingabe_Konsole.Length;
 
-            var fehlerliste = Fehler_finden();
-            return fehlerliste;
-        }
-
-        internal static List<string> Fehler_finden()
+        public static List<string> Wörter_auf_Fehler_überprüfen(string[] liste, List<string> prüfwörter)
         {
             var fehlerliste = new List<string>();
+
+            // einfachere Lösung mit Lambdafunktionen ???
+
+            foreach (string pw in prüfwörter)
+            {
+                var zähler = 0;
+                foreach (string w in liste)
+                {
+                    if (w != pw)
+                    {
+                        zähler++;
+                    }
+                }
+
+                if (zähler == liste.Count()) // kein gleiches Wort gefunden
+                {
+                    fehlerliste.Add(pw);
+                }
+            }
             return fehlerliste;
         }
     }

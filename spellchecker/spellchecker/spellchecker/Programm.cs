@@ -12,9 +12,17 @@ namespace spellchecker
         {
             var ui = new UI();
             var fs = new Filesystem();
+            var cli = new CLI(args);
 
-            var woerter_Datei = fs.Load_text("");
-            Spellchecker_Start.Wörter_prüfen(woerter_Datei, args);       
+#region Wörter aus Quellen holen
+
+            var liste = fs.Wortlistendatei_holen(cli.Dateiname);
+            var prüfwörter = cli.Prüfwörter_von_Konsole_holen();
+#endregion
+
+            var fehler = Spellchecker_Start.Wörter_auf_Fehler_überprüfen(liste, prüfwörter);
+
+            ui.Fehlerliste_ausgeben(fehler);     
         }       
     }
 }

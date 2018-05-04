@@ -8,13 +8,12 @@ namespace spellchecker
 {
     class UI
     {
-        public void Fehlerliste_ausgeben(List<string> fehler)
+         public void Fehlerliste_ausgeben(List<string> fehler)
         {
-            for (int eintrag = 0; eintrag < fehler.Count; eintrag++)
+            for (int i = 0; i < fehler.Count; i++)
             {
-                Console.WriteLine(fehler[eintrag]);
+                Console.WriteLine(fehler[i]);
             }
-
             Console.ReadKey();
         }
     }

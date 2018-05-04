@@ -9,10 +9,22 @@ namespace spellchecker
     class CLI
     {
         private readonly string[] _args;
-        public CLI(string[] args) { _args = args; }
+        public CLI(string[] args)
+        {
+            _args = args;
+        }
 
-        //var arraygroesse = _args.Length(); 
-        public string => int.Parse(_args[0]);
-        public int Jahr => int.Parse(_args[1]);
+        public string Dateiname => _args[0];
+
+        public List<string> Prüfwörter_von_Konsole_holen()
+        {
+            var prüfwörter = new List<string>();
+
+            for (int pw = 1; pw <= _args.Length; pw++) // Liste aus _args ohne Filename erstellen
+            {
+                prüfwörter.Add(prüfwörter[pw]);
+            }
+            return prüfwörter;
+        }
     }
 }

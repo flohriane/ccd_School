@@ -9,19 +9,9 @@ namespace spellchecker
 {
     class Filesystem
     {
-        public string Load_text(string filename)
+        public string[] Wortlistendatei_holen(string dateiname)
         {
-            var text = File.ReadAllText(filename);
-            //var anzahl_wörter = File.ReadLines(filename).LongCount();
-            var woerter = wörter_trennen(text);
-            return text);
-        }
-
-        private string [] wörter_trennen (string text)
-        {
-            string [] wörter = text.Split("\n");
-
-            return wörter;
+            return File.ReadAllLines(dateiname);
         }
     }
 }
