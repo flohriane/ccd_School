@@ -20,9 +20,9 @@ namespace spellchecker
         {
             var prüfwörter = new List<string>();
 
-            for (int pw = 1; pw <= _args.Length; pw++) // Liste aus _args ohne Filename erstellen
+            for (int pw = 1; pw < _args.Length; pw++) // Liste aus _args ohne Filename erstellen
             {
-                prüfwörter.Add(prüfwörter[pw]);
+                prüfwörter.Add(_args[pw]);
             }
             return prüfwörter;
         }
