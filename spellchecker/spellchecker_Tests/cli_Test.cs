@@ -11,13 +11,14 @@ namespace spellchecker_Tests
     [TestFixture]
     class cli_Test
     {
-        [Test]
-        public void Eingabe_testen()
-        {
-            var cli = new CLI(new[] { "a", "b", "c"});
+        //[Test]
+        //public void Eingabe_testen()
+        //{
+        //    var cli = new CLI(new[] {"a", "b", "c"});
 
-            var ergebnis = cli.Prüfwörter_von_Konsole_holen();
-            Assert.AreEqual(2, ergebnis.Count());
-        }
+        //    string dateiname => cli[0];
+
+        //    Assert.AreEqual("a", dateiname);
+        //}
     }
 }

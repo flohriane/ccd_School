@@ -14,17 +14,6 @@ namespace spellchecker
             _args = args;
         }
 
-        public string Dateiname => _args[0];
-
-        public List<string> Prüfwörter_von_Konsole_holen()
-        {
-            var prüfwörter = new List<string>();
-
-            for (int pw = 1; pw < _args.Length; pw++) // Liste aus _args ohne Filename erstellen
-            {
-                prüfwörter.Add(_args[pw]);
-            }
-            return prüfwörter;
-        }
+        public string dateiname => _args[0];
     }
 }

@@ -14,8 +14,8 @@ namespace spellchecker_Tests
         [Test, Category ("Akzeptanztest")]
         public void Fehler_gefunden()
         {
-            var ergebnis = Spellchecker_Start.Wörter_auf_Fehler_überprüfen(new [] {"Äpfel", "Birnen", "Kirschen", "Aprikosen", "Pflaumen"}, new List<string> {"Brinen", "Äppel"});
-            Assert.AreEqual(new[] {"Brinen", "Äppel"}, ergebnis.ToArray());
+            var ergebnis = Spellchecker_Start.Wörter_auf_Fehler_überprüfen(new [] {"Äpfel", "Birnen", "Kirschen", "Aprikosen", "Pflaumen"}, new [] {"Brinen", "Aeppel"});
+            Assert.AreEqual(new[] {"Brinen", "Aeppel"}, ergebnis.ToArray());
         }
     }
 }

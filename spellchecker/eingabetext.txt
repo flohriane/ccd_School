@@ -1,6 +1,7 @@
 Der
 Diskette
-Apfel
+Äppel
+Brinen
 Stamm
 fällt
 weit
@@ -8,4 +9,3 @@ nicht
 ist
 Benutzung
 in
-Birnen

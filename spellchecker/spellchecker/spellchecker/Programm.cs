@@ -14,13 +14,13 @@ namespace spellchecker
             var fs = new Filesystem();
             var cli = new CLI(args);
 
-#region Wörter aus Quellen holen
+#region Wörter aus Dateien holen
 
-            var liste = fs.Wortlistendatei_holen(cli.Dateiname);
-            var prüfwörter = cli.Prüfwörter_von_Konsole_holen();
+            var prüfwörter = fs.Datei_holen(cli.dateiname);
+            var wörter = fs.Datei_holen(@"C: \Users\FlohrCh\Documents\Source\Repos\ccd_School\spellchecker\wortliste.txt");
 #endregion
 
-            var fehler = Spellchecker_Start.Wörter_auf_Fehler_überprüfen(liste, prüfwörter);
+            var fehler = Spellchecker_Start.Wörter_auf_Fehler_überprüfen(wörter, prüfwörter);
 
             ui.Fehlerliste_ausgeben(fehler);     
         }       

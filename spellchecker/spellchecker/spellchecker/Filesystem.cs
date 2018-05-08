@@ -9,7 +9,7 @@ namespace spellchecker
 {
     class Filesystem
     {
-        public string[] Wortlistendatei_holen(string dateiname)
+        public string[] Datei_holen(string dateiname)
         {
             return File.ReadAllLines(dateiname);
         }
