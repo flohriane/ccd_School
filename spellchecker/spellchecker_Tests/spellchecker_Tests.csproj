@@ -52,7 +52,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="cli_Test.cs" />
+    <Compile Include="UI_Test.cs" />
+    <Compile Include="CLI_Test.cs" />
     <Compile Include="Spellchecker_Testing.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace spellchecker
 {
@@ -14,7 +11,7 @@ namespace spellchecker
             {
                 Console.WriteLine(fehler[i]);
             }
-            Console.ReadKey();
+            //Console.ReadKey();
         }
     }
 }

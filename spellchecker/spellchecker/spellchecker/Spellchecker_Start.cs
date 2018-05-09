@@ -1,13 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace spellchecker
 {
     public class Spellchecker_Start
     {
+        public static string[] Text_in_Wörter_zerlegen(string text)
+        {
+            var prüfwörter = text.Split(new [] {'.', ',', ';', '!', '?', ' ', '\t', '\n', '\r', '\b', '\v'}, StringSplitOptions.RemoveEmptyEntries);
+
+            return prüfwörter;
+        }
 
         public static List<string> Wörter_auf_Fehler_überprüfen(string[] wörter, string[] prüfwörter)
         {
