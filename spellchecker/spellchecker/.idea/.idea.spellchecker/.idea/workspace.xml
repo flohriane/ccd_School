@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="08dd7ad5-ce08-47d2-a378-0cc8c47ca81c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/spellchecker/Filesystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/spellchecker/Filesystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spellchecker/Spellchecker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/spellchecker/Spellchecker.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spellchecker_Tests/Spellchecker_Testing.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../spellchecker_Tests/Spellchecker_Testing.cs" afterDir="false" />
-    </list>
+    <list default="true" id="08dd7ad5-ce08-47d2-a378-0cc8c47ca81c" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,11 +11,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Programm.cs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Programm.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/spellchecker/Programm.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
+            <state relative-caret-position="208">
+              <caret line="17" column="68" lean-forward="true" selection-start-line="17" selection-start-column="68" selection-end-line="17" selection-end-column="68" />
               <folding>
                 <marker date="1526286895000" expanded="false" signature="6:115" ph="..." />
                 <marker date="1526286895000" expanded="true" signature="139:691" ph="{...}" />
@@ -59,17 +55,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Spellchecker_Testing.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Spellchecker_Testing.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../spellchecker_Tests/Spellchecker_Testing.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+            <state relative-caret-position="160">
+              <caret line="10" column="35" lean-forward="true" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
               <folding>
-                <marker date="1526287614000" expanded="true" signature="6:76" ph="..." />
-                <marker date="1526287614000" expanded="true" signature="106:895" ph="{...}" />
-                <marker date="1526287614000" expanded="true" signature="164:893" ph="{...}" />
-                <marker date="1526287614000" expanded="true" signature="221:514" ph="{...}" />
-                <marker date="1526287614000" expanded="true" signature="566:887" ph="{...}" />
+                <marker date="1526287706000" expanded="true" signature="6:76" ph="..." />
+                <marker date="1526287706000" expanded="true" signature="106:925" ph="{...}" />
+                <marker date="1526287706000" expanded="true" signature="164:923" ph="{...}" />
+                <marker date="1526287706000" expanded="true" signature="221:514" ph="{...}" />
+                <marker date="1526287706000" expanded="true" signature="566:917" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -78,8 +74,8 @@
       <file leaf-file-name="Spellchecker.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spellchecker/Spellchecker.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="96">
+              <caret line="8" column="49" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
               <folding>
                 <marker date="1526287614000" expanded="false" signature="6:66" ph="..." />
                 <marker date="1526287614000" expanded="true" signature="90:745" ph="{...}" />
@@ -219,12 +215,12 @@
       <updated>1525523745507</updated>
       <workItem from="1525523749962" duration="193000" />
       <workItem from="1525679425898" duration="9000" />
-      <workItem from="1526283561844" duration="4037000" />
+      <workItem from="1526283561844" duration="4822000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4239000" />
+    <option name="totallyTimeSpent" value="5024000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -242,7 +238,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" id="Errors In Solution" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Unit Tests" order="7" />
+      <window_info anchor="bottom" id="Unit Tests" order="7" visible="true" weight="0.32871014" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
@@ -350,33 +346,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spellchecker/Spellchecker.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <marker date="1526287614000" expanded="false" signature="6:66" ph="..." />
-            <marker date="1526287614000" expanded="true" signature="90:745" ph="{...}" />
-            <marker date="1526287614000" expanded="true" signature="122:743" ph="{...}" />
-            <marker date="1526287614000" expanded="true" signature="196:397" ph="{...}" />
-            <marker date="1526287614000" expanded="true" signature="504:737" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spellchecker/Programm.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
-          <folding>
-            <marker date="1526286895000" expanded="false" signature="6:115" ph="..." />
-            <marker date="1526286895000" expanded="true" signature="139:691" ph="{...}" />
-            <marker date="1526286895000" expanded="true" signature="160:689" ph="{...}" />
-            <marker date="1526286895000" expanded="true" signature="206:676" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spellchecker/Filesystem.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
@@ -393,14 +362,41 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../spellchecker_Tests/Spellchecker_Testing.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+        <state relative-caret-position="160">
+          <caret line="10" column="35" lean-forward="true" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
           <folding>
-            <marker date="1526287614000" expanded="true" signature="6:76" ph="..." />
-            <marker date="1526287614000" expanded="true" signature="106:895" ph="{...}" />
-            <marker date="1526287614000" expanded="true" signature="164:893" ph="{...}" />
-            <marker date="1526287614000" expanded="true" signature="221:514" ph="{...}" />
-            <marker date="1526287614000" expanded="true" signature="566:887" ph="{...}" />
+            <marker date="1526287706000" expanded="true" signature="6:76" ph="..." />
+            <marker date="1526287706000" expanded="true" signature="106:925" ph="{...}" />
+            <marker date="1526287706000" expanded="true" signature="164:923" ph="{...}" />
+            <marker date="1526287706000" expanded="true" signature="221:514" ph="{...}" />
+            <marker date="1526287706000" expanded="true" signature="566:917" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spellchecker/Spellchecker.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="8" column="49" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
+          <folding>
+            <marker date="1526287614000" expanded="false" signature="6:66" ph="..." />
+            <marker date="1526287614000" expanded="true" signature="90:745" ph="{...}" />
+            <marker date="1526287614000" expanded="true" signature="122:743" ph="{...}" />
+            <marker date="1526287614000" expanded="true" signature="196:397" ph="{...}" />
+            <marker date="1526287614000" expanded="true" signature="504:737" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spellchecker/Programm.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="17" column="68" lean-forward="true" selection-start-line="17" selection-start-column="68" selection-end-line="17" selection-end-column="68" />
+          <folding>
+            <marker date="1526286895000" expanded="false" signature="6:115" ph="..." />
+            <marker date="1526286895000" expanded="true" signature="139:691" ph="{...}" />
+            <marker date="1526286895000" expanded="true" signature="160:689" ph="{...}" />
+            <marker date="1526286895000" expanded="true" signature="206:676" ph="{...}" />
           </folding>
         </state>
       </provider>
