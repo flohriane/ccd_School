@@ -1,4 +1,5 @@
-﻿using spellchecker;
+﻿using System.Collections.Generic;
+using spellchecker;
 using NUnit.Framework;
 
 namespace spellchecker_Tests
@@ -16,7 +17,9 @@ namespace spellchecker_Tests
         [Test]
         public void Fehler_finden()
         {
-            var ergebnis = Spellchecker.Wörter_auf_Fehler_überprüfen(new[] { "Äpfel", "Birnen", "Kirschen", "Aprikosen", "Pflaumen" }, new[] { "Brinen", "Aeppel" });
+            var wörter = new[] {"Brinen", "Aeppel"};
+            var lexikon =  new HashSet<string>(new[] {"Äpfel", "Birnen", "Kirschen", "Aprikosen", "Pflaumen"});
+            var ergebnis = Spellchecker.Wörter_auf_Fehler_überprüfen(wörter, lexikon);
             Assert.AreEqual(new[] { "Brinen", "Aeppel" }, ergebnis.ToArray());
         }
     }

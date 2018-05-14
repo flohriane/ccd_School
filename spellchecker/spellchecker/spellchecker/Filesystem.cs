@@ -12,9 +12,10 @@ namespace spellchecker
             return File.ReadAllText(dateiname);
         }
 
-        public string[] Wortliste_holen(string dateiname)
+        public HashSet<string> Wortliste_holen(string dateiname)
         {
-            return File.ReadAllLines(dateiname);
+            var lexikoneinträge = File.ReadAllLines(dateiname);
+            return new HashSet<string>(lexikoneinträge);
         }
     }
 }

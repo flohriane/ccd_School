@@ -13,21 +13,13 @@ namespace spellchecker
             return prüfwörter;
         }
 
-        public static List<string> Wörter_auf_Fehler_überprüfen(string[] wörter, string[] lexikon)
+        public static List<string> Wörter_auf_Fehler_überprüfen(string[] wörter, HashSet<string> lexikon)
         {
             var fehlerliste = new List<string>();
 
-            foreach (var wort in wörter) {
-                var wortIstImLexikon = false;
-                foreach(var lexikoneintrag in lexikon)
-                    if (wort == lexikoneintrag) {
-                        wortIstImLexikon = true;
-                        break;
-                    }
-                
-                if (!wortIstImLexikon)
+            foreach (var wort in wörter)
+                if (!lexikon.Contains(wort))
                     fehlerliste.Add(wort);
-            }
 
             return fehlerliste;
         }
