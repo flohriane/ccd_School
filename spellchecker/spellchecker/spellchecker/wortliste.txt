@@ -1,0 +1,6 @@
+Apfel
+Birne
+Banane
+Haus
+Garten
+Baum

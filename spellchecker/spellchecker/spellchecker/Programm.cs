@@ -15,10 +15,10 @@ namespace spellchecker
             var cli = new CLI(args);
             
             var text = fs.Eingabetext_holen(cli.dateiname);
-            var zu_prüfende_wörter = Spellchecker_Start.Text_in_Wörter_zerlegen(text);
-            var referenzwörter = fs.Wortliste_holen(@"C: \Users\FlohrCh\Documents\Source\Repos\ccd_School\spellchecker\wortliste.txt");
+            var wörter = Spellchecker.Text_in_Wörter_zerlegen(text);
+            var lexikon = fs.Wortliste_holen(@"wortliste.txt");
 
-            var fehler = Spellchecker_Start.Wörter_auf_Fehler_überprüfen(referenzwörter, zu_prüfende_wörter);
+            var fehler = Spellchecker.Wörter_auf_Fehler_überprüfen(wörter, lexikon);
 
             ui.Fehlerliste_ausgeben(fehler);     
         }       

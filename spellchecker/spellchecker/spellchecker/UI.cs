@@ -7,11 +7,9 @@ namespace spellchecker
     {
          public void Fehlerliste_ausgeben(List<string> fehler)
         {
-            for (int i = 0; i < fehler.Count; i++)
-            {
+            for (int i = 0; i < fehler.Count; i++) {
                 Console.WriteLine(fehler[i]);
             }
-            //Console.ReadKey();
         }
     }
 }
