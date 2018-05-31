@@ -9,10 +9,12 @@ namespace tictactoe
     {
         public static string[,] Kommando_ausführen(string [,] spielfeld, string kommando,string spieler)
         {
+            var ui = new UI();
+
             switch (kommando)
             {
                 case "ende":
-                    UI.Programm_beenden();
+                    ui.Programm_beenden();
                     return spielfeld;
                 case "neu":
                     spielfeld = Spielfeld_neu();
@@ -95,24 +97,24 @@ namespace tictactoe
 
         public static string Gewinner_ermitteln(string[,] spielfeld, string spieler)
         {
-            if      ((spielfeld[1, 1] == "X" && spielfeld[1, 3] == "X" && spielfeld[1, 5] == "X") ||    // A0 A1 A2
-                     (spielfeld[3, 1] == "X" && spielfeld[3, 3] == "X" && spielfeld[3, 5] == "X") ||    // B0 B1 B2
-                     (spielfeld[5, 1] == "X" && spielfeld[5, 3] == "X" && spielfeld[5, 5] == "X") ||    // C0 C1 C2
-                     (spielfeld[1, 1] == "X" && spielfeld[3, 1] == "X" && spielfeld[5, 1] == "X") ||    // A0 B0 C0
-                     (spielfeld[1, 3] == "X" && spielfeld[3, 3] == "X" && spielfeld[5, 3] == "X") ||    // A1 B1 C1
-                     (spielfeld[1, 5] == "X" && spielfeld[3, 5] == "X" && spielfeld[3, 5] == "X") ||    // A2 B2 C2
+            if      ((spielfeld[1, 1] == "X" && spielfeld[1, 3] == "X" && spielfeld[1, 5] == "X") ||    // A0 B0 C0
+                     (spielfeld[3, 1] == "X" && spielfeld[3, 3] == "X" && spielfeld[3, 5] == "X") ||    // A1 B1 C1
+                     (spielfeld[5, 1] == "X" && spielfeld[5, 3] == "X" && spielfeld[5, 5] == "X") ||    // A2 B2 C2
+                     (spielfeld[1, 1] == "X" && spielfeld[3, 1] == "X" && spielfeld[5, 1] == "X") ||    // A0 A1 A2
+                     (spielfeld[1, 3] == "X" && spielfeld[3, 3] == "X" && spielfeld[5, 3] == "X") ||    // B0 B1 B2
+                     (spielfeld[1, 5] == "X" && spielfeld[3, 5] == "X" && spielfeld[5, 5] == "X") ||    // C0 C1 C2
                      (spielfeld[1, 1] == "X" && spielfeld[3, 3] == "X" && spielfeld[5, 5] == "X") ||    // A0 B1 C2
-                     (spielfeld[1, 5] == "X" && spielfeld[3, 3] == "X" && spielfeld[5, 1] == "X"))      // A2 B1 C0
+                     (spielfeld[5, 1] == "X" && spielfeld[3, 3] == "X" && spielfeld[1, 5] == "X"))      // A2 B1 C0
                 return "X";
 
-            else if ((spielfeld[1, 1] == "O" && spielfeld[1, 3] == "O" && spielfeld[1, 5] == "O") ||
-                     (spielfeld[3, 1] == "O" && spielfeld[3, 3] == "O" && spielfeld[3, 5] == "O") ||
-                     (spielfeld[5, 1] == "O" && spielfeld[5, 3] == "O" && spielfeld[5, 5] == "O") ||
-                     (spielfeld[1, 1] == "O" && spielfeld[3, 1] == "O" && spielfeld[5, 1] == "O") ||    
-                     (spielfeld[1, 3] == "O" && spielfeld[3, 3] == "O" && spielfeld[5, 3] == "O") ||    
-                     (spielfeld[1, 5] == "O" && spielfeld[3, 5] == "O" && spielfeld[3, 5] == "O") ||    
-                     (spielfeld[1, 1] == "O" && spielfeld[3, 3] == "O" && spielfeld[5, 5] == "O") ||
-                     (spielfeld[1, 5] == "O" && spielfeld[3, 3] == "O" && spielfeld[5, 1] == "O"))
+            else if ((spielfeld[1, 1] == "O" && spielfeld[1, 3] == "O" && spielfeld[1, 5] == "O") ||    // A0 B0 C0
+                     (spielfeld[3, 1] == "O" && spielfeld[3, 3] == "O" && spielfeld[3, 5] == "O") ||    // A1 B1 C1
+                     (spielfeld[5, 1] == "O" && spielfeld[5, 3] == "O" && spielfeld[5, 5] == "O") ||    // A2 B2 C2
+                     (spielfeld[1, 1] == "O" && spielfeld[3, 1] == "O" && spielfeld[5, 1] == "O") ||    // A0 A1 A2
+                     (spielfeld[1, 3] == "O" && spielfeld[3, 3] == "O" && spielfeld[5, 3] == "O") ||    // B0 B1 B2
+                     (spielfeld[1, 5] == "O" && spielfeld[3, 5] == "O" && spielfeld[5, 5] == "O") ||    // C0 C1 C2
+                     (spielfeld[1, 1] == "O" && spielfeld[3, 3] == "O" && spielfeld[5, 5] == "O") ||    // A0 B1 C2
+                     (spielfeld[5, 1] == "O" && spielfeld[3, 3] == "O" && spielfeld[1, 5] == "O"))      // A2 B1 C0
                 return "O";
 
             else if (spielfeld[1, 1] != " " && spielfeld[1, 3] != " " && spielfeld[1, 5] != " " &&

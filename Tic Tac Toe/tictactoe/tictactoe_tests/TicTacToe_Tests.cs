@@ -38,7 +38,9 @@ namespace tictactoe_tests
         [Test]
         public void Gewinner_test()
         {
-            var spielfeld = new string[6,6];
+            var spielfeld = new string[6, 6];
+            spielfeld = TicTacToe.Spielfeld_neu();
+            // A0 B0 C0
             spielfeld[1, 1] = "X";
             spielfeld[1, 3] = "X";
             spielfeld[1, 5] = "X";
@@ -46,6 +48,53 @@ namespace tictactoe_tests
             var gewinner = TicTacToe.Gewinner_ermitteln(spielfeld, "X");
             Assert.AreEqual(gewinner, "X");
 
+            spielfeld = TicTacToe.Spielfeld_neu();
+            // A1 B1 C1
+            spielfeld[3, 1] = "O";
+            spielfeld[3, 3] = "O";
+            spielfeld[3, 5] = "O";
+
+            gewinner = TicTacToe.Gewinner_ermitteln(spielfeld, "O");
+            Assert.AreEqual(gewinner, "O");
+
+            spielfeld = TicTacToe.Spielfeld_neu();
+            // A2 B2 C2
+            spielfeld[5, 1] = "O";
+            spielfeld[5, 3] = "O";
+            spielfeld[5, 5] = "O";
+
+            gewinner = TicTacToe.Gewinner_ermitteln(spielfeld, "O");
+            Assert.AreEqual(gewinner, "O");
+
+            spielfeld = TicTacToe.Spielfeld_neu();
+            // A0 A1 A2
+            spielfeld[1, 1] = "O";
+            spielfeld[3, 1] = "O";
+            spielfeld[5, 1] = "O";
+
+            gewinner = TicTacToe.Gewinner_ermitteln(spielfeld, "O");
+            Assert.AreEqual(gewinner, "O");
+
+            spielfeld = TicTacToe.Spielfeld_neu();
+            // B0 B1 B2
+            spielfeld[1, 3] = "O";
+            spielfeld[3, 3] = "O";
+            spielfeld[5, 3] = "O";
+
+            gewinner = TicTacToe.Gewinner_ermitteln(spielfeld, "O");
+            Assert.AreEqual(gewinner, "O");
+
+            spielfeld = TicTacToe.Spielfeld_neu();
+            // C0 C1 C2
+            spielfeld[1, 5] = "O";
+            spielfeld[3, 5] = "O";
+            spielfeld[5, 5] = "O";
+
+            gewinner = TicTacToe.Gewinner_ermitteln(spielfeld, "O");
+            Assert.AreEqual(gewinner, "O");
+
+            spielfeld = TicTacToe.Spielfeld_neu();
+            // A2 B1 C0
             spielfeld[1, 5] = "O";
             spielfeld[3, 3] = "O";
             spielfeld[5, 1] = "O";
@@ -53,6 +102,18 @@ namespace tictactoe_tests
             gewinner = TicTacToe.Gewinner_ermitteln(spielfeld, "O");
             Assert.AreEqual(gewinner, "O");
 
+            spielfeld = TicTacToe.Spielfeld_neu();
+            // A0 B1 C2
+            spielfeld[1, 1] = "O";
+            spielfeld[3, 3] = "O";
+            spielfeld[5, 5] = "O";
+
+            gewinner = TicTacToe.Gewinner_ermitteln(spielfeld, "O");
+            Assert.AreEqual(gewinner, "O");
+
+            spielfeld = TicTacToe.Spielfeld_neu();
+            spielfeld[1, 1] = "X";
+            spielfeld[1, 3] = "X";
             spielfeld[1, 5] = "O";
             spielfeld[3, 1] = "O";
             spielfeld[3, 3] = "O";

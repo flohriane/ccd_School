@@ -10,19 +10,21 @@ namespace tictactoe
     {
         static void Main(string[] args)
         {
+            var ui = new UI();
+
             var spieler = "X";
             var kommando = "neu";
             var spielfeld = TicTacToe.Spielfeld_neu();
             var gewinner = "";
 
-            while (kommando != "ende" && gewinner == "")
+             while (kommando != "ende" && gewinner == "")
             {
-                UI.Spielfeld_ausgeben(spielfeld);
-                kommando = UI.Kommando_lesen();
+                ui.Spielfeld_ausgeben(spielfeld);
+                kommando = ui.Kommando_lesen();
 
                 spielfeld = TicTacToe.Kommando_ausführen(spielfeld, kommando, spieler);
                 gewinner = TicTacToe.Gewinner_ermitteln(spielfeld, spieler);
-                kommando = UI.Gewinner_ausgeben(gewinner, kommando);
+                kommando = ui.Gewinner_ausgeben(gewinner, kommando);
                 spieler = TicTacToe.Spieler_festlegen(kommando, spieler);
             }
         }

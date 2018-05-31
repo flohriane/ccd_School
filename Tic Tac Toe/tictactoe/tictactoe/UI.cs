@@ -8,12 +8,13 @@ namespace tictactoe
 {
     public class UI
     {
-        public static string Kommando_lesen()
+        public string Kommando_lesen()
         {
             Console.Write("\nKommando: ");
             return Console.ReadLine();
         }
-        public static void Spielfeld_ausgeben(string [,] spielfeld)
+
+        public void Spielfeld_ausgeben(string [,] spielfeld)
         {
             for (int zeile = 0; zeile < 6; zeile++)
             {
@@ -25,7 +26,7 @@ namespace tictactoe
             }
         }
 
-        public static string Gewinner_ausgeben(string spieler, string kommando)
+        public string Gewinner_ausgeben(string spieler, string kommando)
         {
             if (spieler == "X" || spieler == "O")
             {
@@ -40,7 +41,7 @@ namespace tictactoe
             else return kommando;
         }
 
-        public static void Programm_beenden()
+        public void Programm_beenden()
         {
             Console.WriteLine("das Programm wird beendet");
         }
