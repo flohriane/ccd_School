@@ -14,8 +14,8 @@
       <file leaf-file-name="Programm.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/spellchecker/Programm.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="17" column="68" lean-forward="true" selection-start-line="17" selection-start-column="68" selection-end-line="17" selection-end-column="68" />
+            <state relative-caret-position="224">
+              <caret line="18" column="41" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
               <folding>
                 <marker date="1526286895000" expanded="false" signature="6:115" ph="..." />
                 <marker date="1526286895000" expanded="true" signature="139:691" ph="{...}" />
@@ -215,12 +215,12 @@
       <updated>1525523745507</updated>
       <workItem from="1525523749962" duration="193000" />
       <workItem from="1525679425898" duration="9000" />
-      <workItem from="1526283561844" duration="4822000" />
+      <workItem from="1526283561844" duration="5420000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5024000" />
+    <option name="totallyTimeSpent" value="5622000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -390,8 +390,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/spellchecker/Programm.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="17" column="68" lean-forward="true" selection-start-line="17" selection-start-column="68" selection-end-line="17" selection-end-column="68" />
+        <state relative-caret-position="224">
+          <caret line="18" column="41" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
           <folding>
             <marker date="1526286895000" expanded="false" signature="6:115" ph="..." />
             <marker date="1526286895000" expanded="true" signature="139:691" ph="{...}" />
