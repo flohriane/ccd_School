@@ -10,7 +10,12 @@ namespace ttt
     {
         public void Spielstand_anzeigen()
         {
-            // ToDo Spielfeld auf Konsole 
+            // ToDo Spielfeld auf Konsole ausgeben
+        }
+
+        public string Kommando_lesen()
+        {
+            return Console.ReadLine();
         }
     }
 }

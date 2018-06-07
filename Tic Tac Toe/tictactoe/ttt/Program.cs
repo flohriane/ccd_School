@@ -10,8 +10,8 @@ namespace ttt
             UI ui = new UI();
             Spiel spiel = new Spiel();
             Schiedsrichter schiedsrichter = new Schiedsrichter();
-            Spielbrettkoordinate koordinate = new Spielbrettkoordinate();
-            Spielfortschritt fortschritt = new Spielfortschritt();
+            //Spielbrettkoordinate koordinate = new Spielbrettkoordinate();
+            //Spielfortschritt fortschritt = new Spielfortschritt();
 
             App.Run(spiel, ui);
         }
