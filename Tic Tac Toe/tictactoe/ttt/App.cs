@@ -4,30 +4,36 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ttt.contracts.daten;
+using ttt.schiedsrichter;
 
 namespace ttt
 {
     class App
     {
-        public static void Run(Spiel spiel, UI ui) 
-        {
-            spiel.Starten();
-            ui.Spielstand_anzeigen();
-            Gameloop(spiel, ui);
+        private readonly TicTacToe _ttt;
+        private readonly UI _ui;
+
+        public App(TicTacToe ttt, UI ui) {
+            _ttt = ttt;
+            _ui = ui;
+        }
+        
+        
+        public static void Run() {
+            var spielstand = _ttt.Starten();
+            _ui.Spielstand_anzeigen(spielstand);
+            Gameloop();
         }
 
-        private static void Gameloop(Spiel spiel, UI ui)
+        
+        private static void Gameloop()
         {
-            // ToDo Schleife für laufendes Spiel, Abbruch bei "ende" und Zurücksetzen bei "neu"
-            var kommando = ui.Kommando_lesen();
-            var spielstand = Kommando_ausführen(kommando);
-            ui.Spielstand_anzeigen();
-        }
-
-        private static string [,] Kommando_ausführen(string kommando)
-        {
-            var spielstand = new string[1 , 1]; // ToDo dummy ersetzen: mit aktuellen Spielstand aus Klasse "Spiel" holen
-            return spielstand;
+            while (true)
+            {
+                var kommando = _ui.Kommando_lesen();
+                var spielstand = _ttt.Kommando_ausführen(kommando);
+                _ui.Spielstand_anzeigen(spielstand);
+            }
         }
     }
 }

@@ -9,11 +9,11 @@ namespace ttt
         {
             UI ui = new UI();
             Spiel spiel = new Spiel();
-            Schiedsrichter schiedsrichter = new Schiedsrichter();
-            //Spielbrettkoordinate koordinate = new Spielbrettkoordinate();
-            //Spielfortschritt fortschritt = new Spielfortschritt();
+            var schiedsrichter = new Schiedsrichter();
+            var ttt = new TicTacToe(spiel, schiedsrichter);
+            var app = new App(ttt, ui);
 
-            App.Run(spiel, ui);
+            app.Run();
         }
     }
 }

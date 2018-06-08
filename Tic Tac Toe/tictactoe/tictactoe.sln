@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ttt.contracts", "ttt.contra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ttt.schiedsrichter.tests", "ttt.schiedsrichter.tests\ttt.schiedsrichter.tests.csproj", "{169EDF90-58B8-4E78-B9E9-C4AC61803A49}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "continuations", "continuations\continuations.csproj", "{C37537B7-4DA4-4636-8EAE-3718FCA5AD7F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +51,10 @@ Global
 		{169EDF90-58B8-4E78-B9E9-C4AC61803A49}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{169EDF90-58B8-4E78-B9E9-C4AC61803A49}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{169EDF90-58B8-4E78-B9E9-C4AC61803A49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C37537B7-4DA4-4636-8EAE-3718FCA5AD7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C37537B7-4DA4-4636-8EAE-3718FCA5AD7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C37537B7-4DA4-4636-8EAE-3718FCA5AD7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C37537B7-4DA4-4636-8EAE-3718FCA5AD7F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
