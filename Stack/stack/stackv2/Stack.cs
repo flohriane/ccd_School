@@ -8,36 +8,25 @@ namespace stack
 {
     public class Stack
     {
-        private int _zaehler = 0;
-        private List<int> Eintraege = new List<int>();
+        private readonly List<int> _einträge = new List<int>();
 
-        public void Push(int eintrag)
-        {
-            Eintraege.Add(eintrag);
-
-            _zaehler = _zaehler +1;
+        public void Push(int eintrag) {
+            _einträge.Add(eintrag);
         }
 
-        public int Count()
-        {
-            return _zaehler;
+        public int Count() {
+            return _einträge.Count;
         }
 
         public int Pop()
         {
-            var letzterEintrag = Eintraege.Last();
-
-            Eintraege.RemoveAt(Eintraege.Count-1);
-
-            _zaehler--;
-
+            var letzterEintrag = _einträge.Last();
+            _einträge.RemoveAt(_einträge.Count-1);
             return letzterEintrag;
         }
 
-        public int Peek(int stapelstelle)
-        {
-
-            return Eintraege[stapelstelle];
+        public int Peek() {
+            return _einträge.Last();
         }
     }
 }

@@ -64,24 +64,12 @@ namespace stack
         }
 
         [Test]
-        public void PeekLastEntry()
+        public void Peek()
         {
             var stack = new Stack();
             stack.Push(4);
             stack.Push(5);
-            var stapelstelle = stack.Count()-1;
-            Assert.AreEqual(5,stack.Peek(stapelstelle));
-        }
-
-        [Test]
-        public void PeekFirstEntry()
-        {
-            var stack = new Stack();
-            stack.Push(1);
-            stack.Push(3);
-            stack.Push(5);
-            var stapelstelle = stack.Count()-stack.Count();
-            Assert.AreEqual(1, stack.Peek(stapelstelle));
+            Assert.AreEqual(5,stack.Peek());
         }
     }
 }
