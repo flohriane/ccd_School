@@ -10,7 +10,8 @@ namespace stack
     {
         private readonly List<T> _einträge = new List<T>();
 
-        public void Push(T eintrag) {
+        public void Push(T eintrag)
+        {
             _einträge.Add(eintrag);
         }
 
