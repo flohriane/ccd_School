@@ -13,7 +13,7 @@ namespace stack
         [Test]
         public void PushUndCount()
         {
-            var stack = new Stack();
+            var stack = new Stack<int>();
             stack.Push(10);
             var result = stack.Count();
             Assert.AreEqual(1, result);
@@ -22,18 +22,18 @@ namespace stack
         [Test]
         public void PushUndPop()
         {
-            var stack = new Stack();
-            stack.Push(20);
+            var stack = new Stack<string>();
+            stack.Push("ab");
             var result = stack.Pop();
-            Assert.AreEqual(20, result);
+            Assert.AreEqual("ab", result);
         }
 
         [Test]
         public void PushTwoEntries()
         {
-            var stack = new Stack();
-            stack.Push(10);
-            stack.Push(15);
+            var stack = new Stack<bool>();
+            stack.Push(true);
+            stack.Push(false);
             var result = stack.Count();
             Assert.AreEqual(2, result);
         }
@@ -41,7 +41,7 @@ namespace stack
         [Test]
         public void PopTwoEntries()
         {
-            var stack = new Stack();
+            var stack = new Stack<int>();
             stack.Push(20);
             stack.Push(30);
             Assert.AreEqual(30, stack.Pop());
@@ -51,7 +51,7 @@ namespace stack
         [Test]
         public void PopAndCount()
         {
-            var stack = new Stack();
+            var stack = new Stack<int>();
 
             stack.Push(2);
             stack.Push(4);
@@ -66,7 +66,7 @@ namespace stack
         [Test]
         public void Peek()
         {
-            var stack = new Stack();
+            var stack = new Stack<int>();
             stack.Push(4);
             stack.Push(5);
             Assert.AreEqual(5,stack.Peek());

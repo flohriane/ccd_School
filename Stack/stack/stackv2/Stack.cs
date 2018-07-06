@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace stack
 {
-    public class Stack
+    public class Stack<T>
     {
-        private readonly List<int> _einträge = new List<int>();
+        private readonly List<T> _einträge = new List<T>();
 
-        public void Push(int eintrag) {
+        public void Push(T eintrag) {
             _einträge.Add(eintrag);
         }
 
@@ -18,14 +18,14 @@ namespace stack
             return _einträge.Count;
         }
 
-        public int Pop()
+        public T Pop()
         {
             var letzterEintrag = _einträge.Last();
             _einträge.RemoveAt(_einträge.Count-1);
             return letzterEintrag;
         }
 
-        public int Peek() {
+        public T Peek() {
             return _einträge.Last();
         }
     }
