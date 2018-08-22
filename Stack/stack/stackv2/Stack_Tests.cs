@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 
-namespace stack
+
+namespace stackv2
 {
     [TestFixture]
     class StackTests
@@ -13,7 +9,7 @@ namespace stack
         [Test]
         public void PushUndCount()
         {
-            var stack = new Stack<int>();
+            var stack = new stackv2.Stack<int>();
             stack.Push(10);
             var result = stack.Count();
             Assert.AreEqual(1, result);
@@ -22,7 +18,7 @@ namespace stack
         [Test]
         public void PushUndPop()
         {
-            var stack = new Stack<string>();
+            var stack = new stackv2.Stack<string>();
             stack.Push("ab");
             var result = stack.Pop();
             Assert.AreEqual("ab", result);
@@ -31,7 +27,7 @@ namespace stack
         [Test]
         public void PushTwoEntries()
         {
-            var stack = new Stack<bool>();
+            var stack = new stackv2.Stack<bool>();
             stack.Push(true);
             stack.Push(false);
             var result = stack.Count();
@@ -41,7 +37,7 @@ namespace stack
         [Test]
         public void PopTwoEntries()
         {
-            var stack = new Stack<int>();
+            var stack = new stackv2.Stack<int>();
             stack.Push(20);
             stack.Push(30);
             Assert.AreEqual(30, stack.Pop());
@@ -51,7 +47,7 @@ namespace stack
         [Test]
         public void PopAndCount()
         {
-            var stack = new Stack<int>();
+            var stack = new stackv2.Stack<int>();
 
             stack.Push(2);
             stack.Push(4);
@@ -66,7 +62,7 @@ namespace stack
         [Test]
         public void Peek()
         {
-            var stack = new Stack<int>();
+            var stack = new stackv2.Stack<int>();
             stack.Push(4);
             stack.Push(5);
             Assert.AreEqual(5,stack.Peek());
