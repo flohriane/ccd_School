@@ -8,9 +8,9 @@ namespace stackv3
 {
     public class Stapel<T>
     {
-        internal int zaehler = 0;
-        private Eintrag<T> _oberster;
-        public void Push(T neu)
+        internal int _zaehler = 0;
+        internal Eintrag<T> _oberster;
+        internal void Push(T neu)
         {
             var eintragNeu = new Eintrag<T>(neu); 
             if (_oberster != null)
@@ -19,7 +19,12 @@ namespace stackv3
             }
 
             _oberster = eintragNeu;
-            zaehler++;
+            _zaehler++;
+        }
+
+        internal Eintrag<T> Peek() // gibt Zeiger auf den obersten Eintrags zurück
+        {
+            return _oberster;
         }
     }
 }
