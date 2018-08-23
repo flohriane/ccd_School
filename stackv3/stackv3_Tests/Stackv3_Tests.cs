@@ -13,7 +13,7 @@ namespace stackv3_Tests
             stapel.Push(10);
             stapel.Push(20);
             stapel.Push(30);
-            var ergebnis = stapel._zaehler;
+            var ergebnis = stapel.Count;
             Assert.AreEqual(3, ergebnis);
         }
 
@@ -36,19 +36,19 @@ namespace stackv3_Tests
             stapel.Push(51);
             stapel.Push(56);
             var ergebnis = stapel.Pop().wert;
-            var anzahl = stapel._zaehler;
+            var anzahl = stapel.Count;
             Assert.AreEqual(3, anzahl);
             Assert.AreEqual(51, ergebnis);
 
             ergebnis = stapel.Pop().wert;
 
             ergebnis = stapel.Pop().wert;
-            anzahl = stapel._zaehler;
+            anzahl = stapel.Count;
             Assert.AreEqual(1, anzahl);
             Assert.AreEqual(50, ergebnis);
 
             var leer = stapel.Pop();
-            anzahl = stapel._zaehler;
+            anzahl = stapel.Count;
             Assert.AreEqual(0, anzahl);
             Assert.AreEqual(null, leer);
         }
