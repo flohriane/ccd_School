@@ -4,6 +4,18 @@ namespace stackv3
 {
     public class Stapel<T>
     {
+        private class Eintrag<T>
+        {
+            public T wert;
+            public Eintrag<T> nächster;
+
+            public Eintrag(T i)
+            {
+                wert = i;
+            }
+        }
+        
+        
         private Eintrag<T> _oberster; // Zeiger !!!
 
         
@@ -21,30 +33,23 @@ namespace stackv3
         }
         
         
-        public void Push(T neu)
-        {
+        public void Push(T neu) {
             var eintragNeu = new Eintrag<T>(neu); 
             if (_oberster != null)
-            {
                 eintragNeu.nächster = _oberster;
-            }
-
             _oberster = eintragNeu;
         }
 
-        public Eintrag<T> Peek() // gibt Zeiger auf den obersten Eintrag zurück - nicht den Wert !
-        {
-            return _oberster;
-        }
+        public T Peek() // gibt Zeiger auf den obersten Eintrag zurück - nicht den Wert !
+            => _oberster.wert;
 
-        public Eintrag<T> Pop()
+        public T Pop()
         {
-            if (_oberster != null)
-            {
-                _oberster = _oberster.nächster;
-                return _oberster;
-            }
-            return null;
+            if (_oberster == null) throw new InvalidOperationException("Stack empty!");
+
+            var top = _oberster.wert;
+            _oberster = _oberster.nächster;
+            return top;
         }
     }
 }
